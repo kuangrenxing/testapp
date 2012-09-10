@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+.zttopic_tit{  margin-bottom:15px;}
+.zthot_topic{ width:950px; margin:15px auto 0px auto;}
+.zttopic_con a{ margin:0px 6px 8px 0px; display:inline-block;}
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+
+.BG1{ width:780px; height:650px; margin:0 auto;}
+.head{width:780px; height:90px; overflow:hidden;}
+.head2{  width:233px; height:45px; margin-top:28px; float:left; margin-left:227px; overflow:hidden;}
+.head2 h1{ font-size:36px; color:#ff4784;  display:block; float:left; }
+.content{width:780px; height:500px; background:url(../images/BG_big_15.jpg) no-repeat; position:relative; overflow:hidden;}
+.logo{width:176px; height:55px; margin-left:12px; margin-top:22px; display:block; float:left;}
+.s1{ margin-left:17px; margin-top:41px;}
+.s2{top:52px; margin-left:6px; float:left; margin-top: 18px;}
+
+
+.d1{ margin-left:auto; margin-right:auto; margin-top:81px; width:698px; height:301px;}
+.p1{font-size:30px; color:#222222; display:block; width:300px; margin-top:24px; }
+.m1{ margin-left:; margin-top:; float:left;}
+.d2{ float:left; margin-left:25px; margin-top:22px;}
+
+.j1{width:255px; height:169px; margin-left:auto; margin-right:auto; margin-top:10px;}
+.name{ margin-right:auto; margin-top:10px; display:block; font-size:14px; color:#000; margin-bottom:5px;}
+.j1{ text-align:center;}
+
+.j2{ width:565px; height:228px; margin-left:146px; margin-top:20px;}
+.box{ width:71px; height:98px; float:left; margin-left:10px; margin-bottom:10px;}
+.box img,p,input{ margin-left:auto; margin-right:auto; text-align:center; display:block;}
+.j3{ width:315px; height:24px; display:block; margin-left:263px; margin-top:7px;}
+.j3 a{ border:1px solid #D6CED1; color:#2B478B; padding-top:2px;padding-bottom:2px; padding-left:5px; padding-right:5px; margin-right:6px;  background:#FFF;}
+.j3 a:hover{ background:#B7946D; color:#FFF;}
+
+
+
+
+
+
+
