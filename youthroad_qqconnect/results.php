@@ -10,8 +10,10 @@ $hourPath='src/images';
 $baseUrl='http://testapp.dev/youthroad_qqconnect';
 
 
-echo $name = $_GET['name'];
-exit;
+
+//echo $_SESSION['CONNECNT_TYPE'];
+
+
 $beforeContent = "《北京青年》最近可火了，自从被青春撞了一下腰之后就隐隐作痛，你是否也想重走青春路？我刚才参加了一个很好玩的测试，如果想重走青春路，";
 $afterContent = "想知道你要怎么重走青春路吗，一起来测测吧";
 
@@ -79,7 +81,9 @@ $result=array(
 $arr = array();
 $arr = add_share($result);
 $aResult = json_decode($arr,true);
-if($aResult["ret"] != '0'){
+
+
+/* if($aResult["ret"] != '0'){
 	$result1 = array(
 			"access_token" => $_SESSION["access_token"],
 			"appid" => $_SESSION["appid"],
@@ -109,7 +113,8 @@ if($aResult["ret"] != '0'){
 		);
 	}
 	$arr_w = upload_add_weibo($sUrl,$aPOSTParam,$aFileParam);
-}
+} */
+
 header('Location:'.$baseUrl.'/guanzhu.php?access='.$a);
 ?>
 

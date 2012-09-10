@@ -45,10 +45,13 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
 <script language="javascript">
 function location_url(){
 	var url = "http://testapp.dev/youthroad_qqconnect/";	
+	var qqurl = "http://www.tuolar.com/apps/qq/qq/";
+	//var qqurl = "http://testapp.dev/qq/";
+	
 	var txt = $('#search1').val();
 	
 	if(txt != ''){
-		window.location.href="http://www.tuolar.com/apps/qq/qq/?url="+url+"results.php&name="+txt;
+		window.location.href= qqurl+"?url="+url+"results.php&type="+txt;		
 	}else{
 		alert('请您输入微博昵称!');
 	}
