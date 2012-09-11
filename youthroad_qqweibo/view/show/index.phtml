@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>重走青春路 - 拖拉网</title>
 <link href="src/css/style1.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"> 
 window.onload=function(){ 
@@ -16,16 +16,16 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
     <div id="ztcontent">
         <div class="BG2">
         	<div class="head">
-            	<a class="logo" href="" target="_blank"><img src="src/images/haha_03.jpg"/></a>
+            	<a class="logo" title="拖拉网" href="" target="_blank"><img src="src/images/haha_03.jpg"/></a>
                 <p class="p1">时尚更简单</p>
             </div>
             <div class="content">
             	<img class="m1" src="<?php echo $_SESSION['show']['pic_url'];?>"/>
-                <p class="p2"><?php echo $_SESSION['show']['showContent'];?></p>
+                <p class="p2"><?php echo $_SESSION['show']['showContent'];?><?php if($_SESSION['add']['ret']!=0):?><br />抱歉，发送微博失败。<?php endif;?></p>
             </div>
         </div>           
   	</div>
-  	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
+  
 </div>
 
 </body>

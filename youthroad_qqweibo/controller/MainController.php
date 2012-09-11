@@ -67,7 +67,10 @@ class MainController extends Controller
 			$uid=$this->regUser($_SESSION['userinfo']);
 			$_SESSION['userinfo']['uid'] = $uid;
 			//print_r($_SESSION);
-			
+			$fansFatmat = array(
+					'reqnum'=>'72',
+					'startindex'=>'0'
+					);
 			$fanslistRet = Tencent::api("friends/fanslist");
 			$fanslist = json_decode($fanslistRet, true);
 			//随机得到听众下标
@@ -146,10 +149,14 @@ class MainController extends Controller
 					'pic_url' => BASEURL.'/'.$hourPath.'/'.$imageFile,
 					'showContent' => $showContent
 			);
-			$r = Tencent::api('t/add_pic_url', $params, 'POST');
-
+			$add = Tencent::api('t/add_pic_url', $params, 'POST');
+			$add = json_decode($add, true);
 			$_SESSION['show'] = $params;
-			//print_r($_SESSION);
+			//print_r($_SESSION);			
+			
+			$_SESSION['add'] = $add;
+			
+			
 			//关注页
 			$this->redirect(BASEURL.'attention.php');
 			
