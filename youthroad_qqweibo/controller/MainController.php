@@ -139,13 +139,16 @@ class MainController extends Controller
 			//echo $randfans;
 			//发微博	
 			$hourPath='src/images';
-			$content = "@".$randfans['name'].' '.$beforeContent."就要和".$randfans['nick'].$result_content[$a]['content']."就可以重走青春路！".$afterContent.BASEURL;
+			$content = "@".$randfans['name'].' '.$beforeContent."就要和".$randfans['nick'].$result_content[$a]['content'].",你就可以重走青春路！".$afterContent.BASEURL;
+			$showContent = "和@".$randfans['nick'].$textcontent.",你就可以重走青春路！";
 			$params = array(
 					'content' => $content,
-					'pic_url' => BASEURL.'/'.$hourPath.'/'.$imageFile
+					'pic_url' => BASEURL.'/'.$hourPath.'/'.$imageFile,
+					'showContent' => $showContent
 			);
 			$r = Tencent::api('t/add_pic_url', $params, 'POST');
 
+			$_SESSION['show'] = $params;
 			//print_r($_SESSION);
 			//关注页
 			$this->redirect(BASEURL.'attention.php');
