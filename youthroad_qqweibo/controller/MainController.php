@@ -71,10 +71,84 @@ class MainController extends Controller
 			$fanslistRet = Tencent::api("friends/fanslist");
 			$fanslist = json_decode($fanslistRet, true);
 			//随机得到听众下标
-			$key = rand(0,30);
-			print_r($fanslist['data']['info'][$key]);
+			$fansCount = count($fanslist['data']['info']);
+			$key = rand(0,$fansCount-1);
 			
 			
+// 			print_r($fanslist['data']['info']);
+// 			echo "<br><hr>";
+			//听众信息
+			$randfans = $fanslist['data']['info'][$key];
+			
+// 			print_r($randfans);
+			
+			$_SESSION['fanslist'] = $fanslist['data']['info'];
+			$_SESSION['randfans'] = $randfans;
+			
+			//随机得到评语
+			$beforeContent = "《北京青年》最近可火了，自从被青春撞了一下腰之后就隐隐作痛，你是否也想重走青春路？";
+			$afterContent = "想知道你要怎么重走青春路吗，一起来测测吧";
+			
+			$result_content=array(
+					0=>array(
+							'content'=>"一起在高中教室里吃着火锅唱着歌",
+							'weiboimage'=>'content_07.jpg',
+					),
+					1=>array(
+							'content'=>'钓鱼岛狂跳最炫民族风，呼唤标哥一起来 ',
+							'weiboimage'=>'satuation1.jpg',
+					),
+					2=>array(
+							'content'=>'一起在高中班长面前放个屁',
+							'weiboimage'=>'satuation2.jpg',
+					),
+					3=>array(
+							'content'=>'一起去荒野求生，吃虫子，喝河水',
+							'weiboimage'=>'satuation3.jpg',
+					),
+					4=>array(
+							'content'=>'一起回到母校，把画好的黑板报擦掉嫁祸给别人',
+							'weiboimage'=>'satuation7.jpg',
+					),
+					5=>array(
+							'content'=>'化身美少女战士，代表月亮消灭班里的恶势力 ',
+							'weiboimage'=>'satuation4.jpg',
+					),
+					6=>array(
+							'content'=>'一起回到小学二年级，上课的时候光明正大的涂口红',
+							'weiboimage'=>'satuation5.jpg',
+					),
+					7=>array(
+							'content'=>'一起回到婴儿时期，啃自己的脚趾',
+							'weiboimage'=>'satuation6.jpg',
+					),
+			);
+			
+			
+			
+			
+			//随机得到下标
+			$a=array_rand($result_content,1);
+			//得到内容
+			$textcontent=$result_content[$a]['content'];
+			//得到标题
+			// $newTitle=$result_content[$a]['title'];
+			//得到图片
+			$imageFile=$result_content[$a]['weiboimage'];
+			
+			//echo $randfans;
+			//发微博	
+			$hourPath='src/images';
+			$content = "@".$randfans['name'].' '.$beforeContent."就要和".$randfans['nick'].$result_content[$a]['content']."就可以重走青春路！".$afterContent.BASEURL;
+			$params = array(
+					'content' => $content,
+					'pic_url' => BASEURL.'/'.$hourPath.'/'.$imageFile
+			);
+			$r = Tencent::api('t/add_pic_url', $params, 'POST');
+
+			//print_r($_SESSION);
+			//关注页
+			$this->redirect(BASEURL.'attention.php');
 			
 		} else {//未授权
 			$callback = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];//回调url

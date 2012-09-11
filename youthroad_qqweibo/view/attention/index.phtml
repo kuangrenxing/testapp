@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>重走青春路 - 拖拉网</title>
+<link href="src/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+window.onload=function(){ 
+for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=function(){this.blur()} 
+} 
+</script>
+</head>
+<?php 
+//print_r($_SESSION['fanslist']);
+$fansCount = count($_SESSION['fanslist']);
+?>
+ 
+<body id="ztBodyBg">
+<div id="ztcontainer">
+    <div id="ztcontent">
+        <div class="BG1">
+        	<div class="head">
+            	<div class="head1 left">
+                	<a href="http://www.tuolar.com" class="logo"><img src="src/images/img_start_03.jpg"/></a>
+                    <img class="s1" src="src/images/img_start_06.jpg"/>
+                </div>
+                <div class="head2 ">
+                	<h1>重走青春路</h1>
+                    <img class="s2" src="src/images/img_start_09.jpg"/>
+                </div>
+            </div>
+            <div class="content">
+            	<div class="j1">
+                	<h1 class="name"><?php echo $_SESSION['userinfo']['nick'];?></h1>
+                    <a class="a1" href="http://t.qq.com/<?php echo $_SESSION['userinfo']['name'];?>" target="_blank"><img src="<?php echo $_SESSION['userinfo']['head'].'/100';?>"/></a>
+                    <a class="a1" href="" target=""><img src="src/images/start2_07.jpg"/></a>
+                </div>
+                <div class="j2">
+                <?php
+				
+                foreach($_SESSION['fanslist'] as $i=>$v):               
+                if($i >= ($_GET['page']*12)-12 && $i <= ($_GET['page']*12-1))://分页
+                ?>
+                	<div class="box">
+                	 <?php if($_SESSION['fanslist'][$i]['head'] == false):?>
+                    	<img src="src/images/head_normal_50.png"/>
+                     <?php else:?>
+                     	<img src="<?php echo $_SESSION['fanslist'][$i]['head'].'/50';?>"/>
+                     <?php endif;?>
+                        	<p><?php echo $_SESSION['fanslist'][$i]['nick'];?></p>                       		
+                      
+                        <a target="_blank" href="http://t.qq.com/<?php echo $_SESSION['fanslist'][$i]['name'];?>"><input type="button" style=" width:64px; height:24px;" name="" value="看TA的"></a>
+                    </div>
+                <?php 
+                endif;
+                endforeach;?>
+                   
+                    
+                   
+                </div>
+                 <?php
+                 $pre = $_GET['page']-1;
+                 if($_GET['page'] == 1)
+                 	$pre = 1;
+                 $next = $_GET['page']+1;
+                 if($_GET['page'] == ceil($fansCount/12))
+                 	$next = ceil($fansCount/12);
+                 
+                 $last = ceil($fansCount/12);
+                 ?>
+                <div class="j3">
+               
+                	<a href="<?php echo BASEURL.'attention.php?page='.$pre;?>" class="pre">上一页</a>
+                	<?php for($i=1;$i<=$last;$i++):?><a href="<?php echo BASEURL.'attention.php?page='.$i;?>" class="hover"><?php echo $i;?></a><?php endfor;?>
+                	<a href="<?php echo BASEURL.'attention.php?page='.$last;?>" >末页</a>
+                	<a href="<?php echo BASEURL.'attention.php?page='.$next;?>" class="next">下一页</a>
+                </div>
+            </div>
+        </div>            
+  	</div>
+  	
+  
+</div>
+
+</body>
+</html>

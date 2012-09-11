@@ -1,7 +1,7 @@
 <?php
 Globals::requireClass('Controller');
 
-class FollowController extends Controller
+class AttentionController extends Controller
 {
 	public static $defaultConfig = array(
 		'viewEnabled'	=> true,
@@ -23,15 +23,7 @@ class FollowController extends Controller
 		header('P3P:CP=CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR');
 		session_start();
 		
-		if (!isset($_SESSION['oauth2']) && empty($_SESSION['oauth2']["user_id"])){
-			$this->redirect(SINA_APP_CALLBACK);
-		}
 		
-		Globals::requireClass('WeiboOauth');
-		$weibo = new SaeTClient( WB_AKEY , WB_SKEY ,$_SESSION['oauth2']['oauth_token'] ,'' );
-		$rr = $weibo->follow(WB_UID);
-		
-//		$this->redirect(SINA_APPS_SITE);
 	}
 	
 	protected function out()
@@ -40,4 +32,4 @@ class FollowController extends Controller
 	}
 }
 
-Config::extend('FollowController', 'Controller');
+Config::extend('AttentionController', 'Controller');
