@@ -11,7 +11,7 @@ $baseUrl='http://testapp.dev/youthroad_qqconnect';
 
 
 
-//echo $_SESSION['CONNECNT_TYPE'];
+$name = $_SESSION['CONNECNT_TYPE'];
 
 
 $beforeContent = "《北京青年》最近可火了，自从被青春撞了一下腰之后就隐隐作痛，你是否也想重走青春路？我刚才参加了一个很好玩的测试，如果想重走青春路，";
@@ -69,9 +69,9 @@ $result=array(
 		"access_token" => $_SESSION["access_token"],
 		"appid" => $_SESSION["appid"],
 		"openid" => $_SESSION["openid"],
-		'title' => '【《北京青年》测测】'."就和".$result_content[$a]['content']."就可以重走青春路！",
+		'title' => '【《北京青年》测测】'."就和".$name.$result_content[$a]['content']."就可以重走青春路！",
 		'url' => $baseUrl,
-		'comment' => $beforeContent."就和".$result_content[$a]['content'].$afterContent,
+		'comment' => $beforeContent."就和".$name.$result_content[$a]['content'].$afterContent,
 		'summary' => '一部《北京青年》看得观众热血澎湃，剧中何家四兄弟“重走青春路”， 作为何家四兄弟的爱人，都纷纷追随。回想青春，你是否也留有遗憾，想要重走青春路？想知道要做什么才能重走青春路吗？马上就来测测吧。',
 		'images' => $baseUrl.'/'.$hourPath.'/'.$imageFile
 );
