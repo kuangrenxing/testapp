@@ -71,7 +71,7 @@ class MainController extends Controller
 					'reqnum'=>'72',
 					'startindex'=>'0'
 					);
-			$fanslistRet = Tencent::api("friends/fanslist");
+			$fanslistRet = Tencent::api("friends/idollist");
 			$fanslist = json_decode($fanslistRet, true);
 			//随机得到听众下标
 			$fansCount = count($fanslist['data']['info']);
