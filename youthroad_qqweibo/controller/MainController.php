@@ -78,8 +78,7 @@ class MainController extends Controller
 			$key = rand(0,$fansCount-1);
 			
 			
-// 			print_r($fanslist['data']['info']);
-// 			echo "<br><hr>";
+
 			//听众信息
 			$randfans = $fanslist['data']['info'][$key];
 			

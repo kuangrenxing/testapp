@@ -14,7 +14,14 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
 //print_r($_SESSION['fanslist']);
 $fansCount = count($_SESSION['fanslist']);
 ?>
- 
+<style>
+.box p{
+	overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+	
+}
+</style>
 <body id="ztBodyBg">
 <div id="ztcontainer">
     <div id="ztcontent">
