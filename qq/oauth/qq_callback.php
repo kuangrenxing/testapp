@@ -8,7 +8,7 @@ function qq_callback()
     //print_r($_REQUEST);
     //print_r($_SESSION);
 
-    if($_REQUEST['state'] == $_SESSION['state']) //csrf
+    if((isset($_REQUEST['state']) && isset($_SESSION['state'])) &&  $_REQUEST['state'] == $_SESSION['state']) //csrf
     {
         $token_url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&"
             . "client_id=" . $_SESSION["appid"]. "&redirect_uri=" . urlencode($_SESSION["callback"])
@@ -48,6 +48,11 @@ function qq_callback()
 
 function get_openid()
 {
+	if(isset($_SESSION['access_token'])==false)
+	{
+		echo "授权失败了";
+		exit;
+	}
     $graph_url = "https://graph.qq.com/oauth2.0/me?access_token=" 
         . $_SESSION['access_token'];
 
