@@ -58,7 +58,9 @@ text-overflow:ellipsis;
                      <?php endif;?>
                         	<p><?php echo $_SESSION['fanslist'][$i]['nick'];?></p>                       		
                       
-                        <a target="_blank" href="http://t.qq.com/<?php echo $_SESSION['fanslist'][$i]['name'];?>"><input type="button" style=" width:64px; height:24px;" name="" value="看TA的"></a>
+                       
+                        <input type="button" onclick="link('http://t.qq.com/<?php echo $_SESSION['fanslist'][$i]['name'];?>')" style="width:64px; height:24px;" name="" value="看TA的">
+                        
                     </div>
                 <?php 
                 endif;
@@ -92,4 +94,10 @@ text-overflow:ellipsis;
 </div>
 
 </body>
+<script>
+function link(value)
+{
+	window.open(value);
+}
+</script>
 </html>
