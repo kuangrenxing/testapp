@@ -58,7 +58,7 @@ text-overflow:ellipsis;
                      <?php endif;?>
                         	<p><?php echo $_SESSION['friends'][$i]['name'];?></p>                       		
                       
-                        <a target="_blank" href="http://weibo.com/u/<?php echo $_SESSION['friends'][$i]['id'];?>"><input type="button" style=" width:64px; height:24px;" name="" value="看TA的"></a>
+                        <a target="_blank" href="http://weibo.com/u/<?php echo $_SESSION['friends'][$i]['id'];?>"><input type="button" onclick="link('http://weibo.com/u/<?php echo $_SESSION['friends'][$i]['id'];?>')" style=" width:64px; height:24px;" name="" value="看TA的"></a>
                     </div>
                 <?php 
                 endif;

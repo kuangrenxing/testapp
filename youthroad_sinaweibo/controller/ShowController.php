@@ -1,6 +1,6 @@
 <?php
 Globals::requireClass('Controller');
-Globals::requireClass('Tencent');
+Globals::requireClass('saetv2.ex.class');
 
 class ShowController extends Controller
 {
@@ -25,34 +25,16 @@ class ShowController extends Controller
 		header('P3P:CP=CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR');
 		header("content-type:text/html;charset=utf-8;");
 		
-	
-		
-		$client_id = CLIENT_ID;
-		$client_secret = CLIENT_SECRET;
-		$debug = DEBUG;
-		OAuth::init($client_id, $client_secret);
-		Tencent::$debug = $debug;
-		
-		//打开session
-		
-		header('Content-Type: text/html; charset=utf-8');
-		
-		if (isset($_SESSION['t_access_token']) || ($_SESSION['t_openid'] && $_SESSION['t_openkey'])) {//用户已授权
-		
-			//获取用户信息
-			$paramsListener = array(
-					'name' => 'tuolarfashion',
-					'format'=>'json'
-					
-										
-			);
-			$listener = Tencent::api('friends/add',$paramsListener, 'POST');
-				
-			$ret = json_decode($listener, true);
-			
-		}else
+		if(isset($_SESSION['show']) == false || isset($_SESSION['token']['access_token']) == false)
 		{
 			$this->redirect(BASEURL);
+		}
+		else
+		{
+			//关注
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
+			$ret = $c->follow_by_id("1761623191");
+			
 		}
 		
 	}
