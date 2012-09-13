@@ -2,14 +2,12 @@
 Globals::requireClass('Controller');
 Globals::requireClass('saetv2.ex.class');
 
-Globals::requireTable('Sinapx');
 Globals::requireTable('User');
 Globals::requireTable('Connect');
 
 
 class MainController extends Controller
-{
-	protected $sinapx;
+{	
 	protected $user;
 	protected $connect;
 	
@@ -22,7 +20,7 @@ class MainController extends Controller
 	public function __construct($config = null)
 	{
 		parent::__construct($config);
-		$this->sinapx = new SinapxTable($config);
+		
 		$this->user				= new UserTable($config);
 		$this->connect			= new ConnectTable($config);
 	}

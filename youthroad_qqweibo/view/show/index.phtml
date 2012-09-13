@@ -21,7 +21,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
             </div>
             <div class="content">
             	<img class="m1" src="<?php echo $_SESSION['show']['pic_url'];?>"/>
-                <p class="p2"><?php echo $_SESSION['show']['showContent'];?><?php if($_SESSION['add']['ret']!=0):?><br />抱歉，发送微博失败。<?php endif;?></p>
+                <p class="p2"><?php echo $_SESSION['show']['showContent'];?><a class="resetbegin" href="<?php echo BASEURL;?>"><img src="src/images/resetbegin.jpg" /></a><?php if($_SESSION['add']['ret']!=0):?><br />抱歉，发送微博失败。<?php endif;?></p>
             </div>
         </div>           
   	</div>
