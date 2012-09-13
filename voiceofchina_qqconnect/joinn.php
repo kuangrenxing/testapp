@@ -5,7 +5,7 @@ include_once 'common/define.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>谁为你转身 - 中国好声音 - 应用小测试 - 拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"> 
 window.onload=function(){ 

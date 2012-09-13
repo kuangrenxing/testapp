@@ -1,6 +1,9 @@
 <?php 
+session_start();
+
 include_once './common/config.php';
 $artistKey = explode(",", $_GET['people']);
+$_SESSION['song'] =  $_GET['song'];
 //老师列表
 $choiceArtist = "";
 
@@ -24,7 +27,7 @@ $choiceArtist = implode(',', $choiceArtistArr);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>谁为你转身 - 中国好声音 - 应用小测试 - 拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"> 
 window.onload=function(){ 
@@ -65,7 +68,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
                     	<?php if(array_key_exists($i, $artistKey)):?>                    	
                     	<div class="box">
                         	<div class="d2"><img src="<?php echo $v['avatar'];?>"/>
-                            	 <a href="attention.php?artist=<?php echo $i;?>" target="_blank"><img src="src/images/images_11.jpg"/></a>		
+                            	 <a href="attention.php?artist=<?php echo $i;?>" ><img src="src/images/images_11.jpg"/></a>		
                             </div>
                             <p><?php echo $v['content'];?></p>
                         </div>

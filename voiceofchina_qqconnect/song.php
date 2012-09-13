@@ -154,7 +154,7 @@ function getNextUrl()
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>歌曲选择 - 中国好声音 - 应用小测试 - 拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"> 
 window.onload=function(){ 
@@ -180,7 +180,8 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
             	<div class="banner">
                 	<ul>
                 	<?php foreach($randKeys as $i=>$v):?>
-                		<li><a href="<?php echo getNextUrl();?>" target=""><img src="src/images/choice_03.jpg" title="选择"/></a><p class="pp"><?php echo $keys[$i];?>:<?php echo $songList[$v];?></p></li>
+                	<?php $nextUrl = getNextUrl();?>
+                		<li><a href="<?php echo $nextUrl;?><?php if($nextUrl == 'joinn.php'):?>?song=<?php else:?>&song=<?php endif;?><?php echo $songList[$v];?>" target=""><img src="src/images/choice_03.jpg" title="选择"/></a><p class="pp"><?php echo $keys[$i];?>:<?php echo $songList[$v];?></p></li>
                 	<?php endforeach;?>
                     	
                     </ul>
