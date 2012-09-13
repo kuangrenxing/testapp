@@ -1,3 +1,6 @@
+<?php 
+include_once 'common/define.php';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,8 +35,8 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
                             <p> ***中国好声音由凉茶领导者***冠名播出，***凉茶，正宗好凉茶，很可惜没有老师为你转身</p>
                         </div>
                         <div class="d5">
-                        	<a href="" target=""><img src="src/images/focus_03.jpg"/></a>
-                            <a href="" target=""><img src="src/images/signAgain_03.jpg"/></a>
+                        	<a href="attention.php?artist=0" target="_blank"><img src="src/images/focus_03.jpg"/></a>
+                            <a href="song.php" target=""><img src="src/images/signAgain_03.jpg"/></a>
                         </div>
                     </div> 
                 </div>

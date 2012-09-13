@@ -1,3 +1,25 @@
+<?php 
+include_once './common/config.php';
+$artistKey = explode(",", $_GET['people']);
+//老师列表
+$choiceArtist = "";
+
+foreach ($artistKey as  $i=>$v)
+{
+	$artistKey[$v] = $v;	
+}
+unset($artistKey[0]);
+
+//求老师列表
+foreach($artistKey as $i=>$v)
+{
+	$choiceArtistArr[]=$artist[$v]['name'];
+}
+//老师列表
+$choiceArtist = implode(',', $choiceArtistArr);
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,32 +48,30 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
             </div>
             <div class="content_2">
             	<div class="banner2">
-                	<h1>你太强了！！有两位导师为你转身，请选择一位进入他的小组</h1>
+                	<h1>
+                	
+                	<?php if(count($artistKey) == 1):?>
+                		恭喜你， <?php echo $choiceArtist;?>，为你转身，你没得选择了，只能进入<?php echo $choiceArtist;?>组
+                	<?php elseif (count($artistKey) == 2 ):?>
+                		不错哦  ，<?php echo $choiceArtist;?>，为你转身，请选择一位进入他的小组 
+                	<?php elseif (count($artistKey) == 3):?>
+                		很厉害哦，<?php echo $choiceArtist;?>，为你转身，请选择一位进入他的小组 
+                	<?php elseif (count($artistKey) == 4):?>
+                		你太强了！！<?php echo $choiceArtist;?>，都被你折服，只等你钦点一位进入该组
+                	<?php endif;?>
+                	</h1>
                     <div class="d1">
+                    <?php foreach($artist as $i=>$v):?>                   
+                    	<?php if(array_key_exists($i, $artistKey)):?>                    	
                     	<div class="box">
-                        	<div class="d2"><img src="src/images/images_06.jpg"/>
-                            	 <a href="" target="_blank"><img src="src/images/images_11.jpg"/></a>		
+                        	<div class="d2"><img src="<?php echo $v['avatar'];?>"/>
+                            	 <a href="attention.php?artist=<?php echo $i;?>" target="_blank"><img src="src/images/images_11.jpg"/></a>		
                             </div>
-                            <p>选我选我选我。。。</p>
+                            <p><?php echo $v['content'];?></p>
                         </div>
-                        <div class="box">
-                        	<div class="d2"><img src="src/images/images_03.jpg"/>
-                            	 <a href="" target="_blank"><img src="src/images/images_11.jpg"/></a>		
-                          </div>
-                            <p>我会让你更细腻，来我这儿吧！我的团队就缺一个你这样的，我的队里就缺你这一号的</p>
-                        </div>
-                        <div class="box">
-                        	<div class="d2"><img src="src/images/images_16.jpg"/>
-                            	 <a href="" target="_blank"><img src="src/images/images_11.jpg"/></a>		
-                          </div>
-                            <p>来我的团队吧，我会把你打造成一位全方位的歌手；明天1月1号，五棵松体育馆，我有一场超大型的跨年演唱会。</p>
-                        </div>
-                        <div class="box">
-                        	<div class="d2"><img src="src/images/images_14.jpg"/>
-                            	 <a href="" target="_blank"><img src="src/images/images_11.jpg"/></a>		
-                          </div>
-                            <p>我今年有32场演唱会。我是一位创作型歌手，你来我的团队我会专门为你写歌。</p>
-                        </div>
+                        <?php endif;?>
+                     <?php endforeach;?>
+            
                     </div>
                 </div>
             </div>
