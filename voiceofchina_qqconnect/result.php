@@ -14,10 +14,10 @@ $result=array(
 		"access_token" => $_SESSION["access_token"],
 		"appid" => $_SESSION["appid"],
 		"openid" => $_SESSION["openid"],
-		'title' => '《中国好声音》如果想实现音乐梦想，玩转中国好声音，一起来测测吧',
+		'title' => '《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动? 一起来测试吧',
 		'url' => BASEURL,
-		'comment' => "我得到".$artist[$_GET['artist']]['name']."老师认可,对我说：".$artist[$_GET['artist']]['content']."网址:".BASEURL,
-		'summary' => '《中国好声音》如果想实现音乐梦想，玩转中国好声音',
+		'comment' => "我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."网址:".BASEURL,
+		'summary' => '如果想实现音乐梦想，玩转中国好声音，马上行动吧',
 		'images' => BASEURL.$artist[$_GET['artist']]['img']
 );
 

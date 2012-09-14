@@ -30,7 +30,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
                 </div>
             </div>
             <div class="content">
-            	<a class="start" href="javascript:void(0);" onclick="location_url();" target="_blank"><img src="src/images/img_14.jpg"/></a>
+            	<a class="start" href="javascript:void(0);" onclick="location_url();" ><img src="src/images/img_14.jpg"/></a>
             </div>
         </div>            
   	</div>
