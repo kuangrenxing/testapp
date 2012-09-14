@@ -35,7 +35,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
                             <p> ***中国好声音由凉茶领导者***冠名播出，***凉茶，正宗好凉茶，很可惜没有老师为你转身</p>
                         </div>
                         <div class="d5">
-                        	<a href="attention.php?artist=0" target="_blank"><img src="src/images/focus_03.jpg"/></a>
+                        	<a href="attention.php?artist=0" ><img src="src/images/focus_03.jpg"/></a>
                             <a href="song.php" target=""><img src="src/images/signAgain_03.jpg"/></a>
                         </div>
                     </div> 

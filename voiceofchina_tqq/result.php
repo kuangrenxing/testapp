@@ -1,30 +1,29 @@
 <?php
+session_start();
+require_once './common/config.php';
+require_once './common/define.php';
 
-include_once 'common/config.php';
-include_once 'common/define.php';
-require_once('./functions.php');
-require_once("../qq/comm/config.php");
 
-if(isset($_SESSION['song']) == false || $_GET['artist'] == false || isset($_SESSION["access_token"]) == false || isset($_SESSION["appid"]) == false || isset($_SESSION["openid"]) == false)
+if(isset($_SESSION['song']) == false || isset($_GET['artist']) == false )
 {
 	header('Location: '.BASEURL);
 }
 
-$result=array(
-		"access_token" => $_SESSION["access_token"],
-		"appid" => $_SESSION["appid"],
-		"openid" => $_SESSION["openid"],
-		'title' => '《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动? 一起来测试吧',
-		'url' => BASEURL,
-		'comment' => "我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."网址:".BASEURL,
-		'summary' => '如果想实现音乐梦想，玩转中国好声音，马上行动吧',
-		'images' => BASEURL.$artist[$_GET['artist']]['img']
-);
+// $result=array(
+// 		"access_token" => $_SESSION["access_token"],
+// 		"appid" => $_SESSION["appid"],
+// 		"openid" => $_SESSION["openid"],
+// 		'title' => '《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动? 一起来测试吧',
+// 		'url' => BASEURL,
+// 		'comment' => "我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."网址:".BASEURL,
+// 		'summary' => '如果想实现音乐梦想，玩转中国好声音，马上行动吧',
+// 		'images' => BASEURL.$artist[$_GET['artist']]['img']
+// );
 
 
 
-$arr = array();
-$arr = add_share($result);
+// $arr = array();
+// $arr = add_share($result);
 //$aResult = json_decode($arr,true);
 
 
@@ -48,16 +47,16 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
     <div id="ztcontent">
         <div class="BG2">
         	<div class="head">
-            	<a class="logo" href="" target="_blank"><img title="拖拉网" src="src/images/haha_03.jpg"/></a>
-                <a class="p1" target="_blank" href="http://tuolar.com"><img src="src/images/test_06.jpg" /></a>
+            	<a class="logo" href="http://www.tuolar.com" target="_blank"><img title="拖拉网" src="src/images/haha_03.jpg"/></a>
+                <a class="p1" target="_blank" href="http://www.tuolar.com"><img src="src/images/test_06.jpg" /></a>
             </div>
             <div class="content">
-            	<h1>这首《<?php echo $_SESSION['song']; ?>》</span>得到了导师的认可，最后加入了</h1>
+            	<h1>这首《<?php echo $_SESSION['song']; ?>》</span><?php if($_GET['artist']):?>得到了导师的认可，最后加入了<?php else:?> 由于竞争太激烈了，很遗憾地没有入选。 <?php endif;?></h1>
             	<div class="d5">
-            	<img title="" class="m1" src="<?php echo $artist[$_GET['artist']]['img'];?>"/>
+            	<img title="" class="m1" src="<?php if($_GET['artist']) echo $artist[$_GET['artist']]['img']; else echo "src/images/test2_03.jpg";?>"/>
                 <div class="d6">
-                <h1><?php echo $artist[$_GET['artist']]['name'];?>老师</h1>
-                <p class="p2"><?php echo $artist[$_GET['artist']]['content'];?></p>
+                <h1><?php if($_GET['artist']):?><?php echo $artist[$_GET['artist']]['name'];?>老师<?php else:?>没有入选<?php endif;?></h1>
+                <p class="p2"><?php if($_GET['artist']):?><?php echo $artist[$_GET['artist']]['content'];?><?php else:?>加多宝中国好声音由凉茶领导者加多宝冠名播出，加多宝凉茶，正宗好凉茶<?php endif;?></p>
                 <a class="restart" href="<?php echo BASEURL;?>" target=""><img src="src/images/resetbegin.jpg"/></a>
                 </div>
                 </div>
