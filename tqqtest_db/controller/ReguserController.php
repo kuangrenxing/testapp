@@ -36,7 +36,7 @@ class ReguserController extends Controller
 			$afterurl = $_GET['afterurl'];
 		else
 		{
-			echo "请定义AFTERAUTHURL";
+			echo "请定义afterurl";
 		}
 		
 		if(isset($_SESSION['userinfo'])==false)

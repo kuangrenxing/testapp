@@ -15,6 +15,18 @@ Tencent::$debug = $debug;
 session_start();
 header('Content-Type: text/html; charset=utf-8');
 
+if(isset($_GET['afterurl']) || isset($_SESSION['afterurl']))
+{	
+	if(isset($_GET['afterurl']))
+	$_SESSION['afterurl'] = $_GET['afterurl'];
+	
+}
+else
+{
+	echo "变量afterurl未定义";	 
+	exit;
+}
+
 if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openkey'])) {//用户已授权
     
     //获取用户信息
@@ -27,14 +39,14 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
     
     $_SESSION['userinfo']['wb_app_connweifushi'] = WB_APP_CONN_WEIFUSHI;
     
-    if(isset($_GET['afterurl']))
+    if(isset($_SESSION['afterurl']))
     {
 		//进行注册
-	    header('Location: '.REGURL."?afterurl=".$_GET['afterurl']);
+	    header('Location: '.REGURL."?afterurl=".$_SESSION['afterurl']);
     }
     else
-    {
-    	echo "变量afterurl未定义";
+    {    	
+    	echo "变量afterurl可以失效，请返回";    	
     	exit;
     }	   
    
