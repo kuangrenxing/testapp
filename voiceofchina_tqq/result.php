@@ -4,27 +4,11 @@ require_once './common/config.php';
 require_once './common/define.php';
 
 
-if(isset($_SESSION['song']) == false || isset($_GET['artist']) == false )
-{
-	header('Location: '.BASEURL);
-}
+// if(isset($_SESSION['song']) == false)
+// {
+// 	header('Location: '.BASEURL);
+// }
 
-// $result=array(
-// 		"access_token" => $_SESSION["access_token"],
-// 		"appid" => $_SESSION["appid"],
-// 		"openid" => $_SESSION["openid"],
-// 		'title' => '《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动? 一起来测试吧',
-// 		'url' => BASEURL,
-// 		'comment' => "我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."网址:".BASEURL,
-// 		'summary' => '如果想实现音乐梦想，玩转中国好声音，马上行动吧',
-// 		'images' => BASEURL.$artist[$_GET['artist']]['img']
-// );
-
-
-
-// $arr = array();
-// $arr = add_share($result);
-//$aResult = json_decode($arr,true);
 
 
 ?>
