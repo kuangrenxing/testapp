@@ -39,9 +39,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
 <script language="javascript">
 function location_url(){
 	var url = "<?php echo BASEURL;?>";	
-	
-	window.location.href= url+"authorization.php";		
-	
+	window.location.href= url+"authorization.php?afterurl="+url+"song.php";	
 }
 </script>
 

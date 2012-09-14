@@ -26,26 +26,17 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
     $_SESSION['userinfo']['id']=$ret['data']['openid'];
     
     $_SESSION['userinfo']['wb_app_connweifushi'] = WB_APP_CONN_WEIFUSHI;
-    //print_r($_SESSION);
-
-    //exit;
-    header('Location: '.REGURL."?afterurl=".AFTERAUTHURL);
-    	
-    /* //收听
-     $paramsListener = array(
-     		'name' => 'tuolarfashion',
-     		'format'=>'json'
-     			
     
-     );
-    $listener = Tencent::api('friends/add',$paramsListener, 'POST'); */
-    	
-    
-//     $uid=$this->regUser($_SESSION['userinfo']);
-//     $_SESSION['userinfo']['uid'] = $uid;
-    
-    
-    
+    if(isset($_GET['afterurl']))
+    {
+		//进行注册
+	    header('Location: '.REGURL."?afterurl=".$_GET['afterurl']);
+    }
+    else
+    {
+    	echo "变量afterurl未定义";
+    	exit;
+    }	   
    
 } else {//未授权
     $callback = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];//回调url
