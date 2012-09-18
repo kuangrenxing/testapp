@@ -32,7 +32,7 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
 	}
 	else
 	{
-		$content = "《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动?我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."一起来测试吧!网址:".BASEURL;
+		$content = "@".$artist[$_GET['artist']]['name']." 《中国好声音》 恐怕火星人都知道了，想知道哪位老师会为你转身，为你心动?我得到".$artist[$_GET['artist']]['name']."导师认可：I WANT U ".$artist[$_GET['artist']]['content']."一起来测试吧!网址:".BASEURL;
 		$pic_url = BASEURL.$artist[$_GET['artist']]['img'];
 	}
 	
