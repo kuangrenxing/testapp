@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>星座选择-非诚勿扰-测试小应用-拖拉网</title>
+<title>请选择你星座 -非诚勿扰-测试小应用-拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="content_2">
-            	<h1 class="contellation">2.请选择你星座</h1>
+            	<h1 class="contellation">1.请选择你星座</h1>
                 <div class="d1">
                 	<div class="box">
                       <a href="love.php" ><img src="src/images/constellation_03.jpg" title="白羊座"/></a>

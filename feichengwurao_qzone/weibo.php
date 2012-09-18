@@ -1,5 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8;");
+
 include_once './common/config.php';
 include_once './common/define.php';
 require_once('./functions.php');
@@ -22,6 +23,8 @@ $result=array(
 
 
 $arr = add_share($result);
+
+
 
 header("location: ".BASEURL."result.php?key=".$key);
 
