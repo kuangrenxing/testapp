@@ -1,14 +1,8 @@
-<?php
-session_start();
-include_once 'common/define.php';
-
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>非诚勿扰-测试小应用-拖拉网</title>
+<title>请问你恋爱过几次？-非诚勿扰-测试小应用-拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -26,25 +20,22 @@ include_once 'common/define.php';
                 	<img src="src/images/img_03.jpg" title="非诚勿扰"/>
                 </div>
             </div>
-            <div class="content">
-            	<p class="p1">看《非诚勿扰》时，是否也曾经想过，假如在屏幕上的男嘉宾是你，你能否带走你的心动女生。赶快来测试吧。</p>
-            	<a class="start" onclick="location_url();" href="javascript:void(0);" ><img src="src/images/img_14.png"/></a>
+            <div class="content_2">
+            	<h1 class="love">2.请问你恋爱过几次？</h1>
+               <div class="d2">
+               		<a href="beautiful.php"><img src="src/images/love_03.jpg" title="0次"/></a>
+                    <a href="beautiful.php"><img src="src/images/love_06.jpg" title="小于3次"/></a>
+                    <a href="beautiful.php"><img src="src/images/love_08.jpg" title="3到5次"/></a>
+                    <a href="beautiful.php"><img src="src/images/love_10.jpg" title="大于5次"/></a>
+                    
+               </div>
+                
+            	
             </div>
         </div>            
   	</div>
   	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
 </div>
-
-<script language="javascript">
-function location_url(){
-	var url = "<?php echo BASEURL;?>";
-	var apiurl = "<?php echo TQQAPIURL;?>";		
-	var wb_app_conn_weifushi = "<?php echo WB_APP_CONN_WEIFUSHI;?>";
-	
-	window.location.href= apiurl+"authorization.php?afterurl="+url+"constellation.php&wb_app_conn_weifushi="+wb_app_conn_weifushi;	
-}
-</script>
-
 
 </body>
 </html>
