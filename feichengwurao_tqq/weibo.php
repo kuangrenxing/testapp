@@ -19,13 +19,13 @@ foreach($idollistKey as $i=>$v)
 {
 	$meting .= "@".$idollist[$v]['name'].' ';
 }
-if($meting == "")
+if(strlen($meting) == 0)
 {
-// 	echo "NO";
-// 	exit;
+	echo "NO";
+	exit;
 }
-
-
+// echo $meting;exit;
+// file_put_contents("test2", strlen($meting).$meting);
 
 //随机下标
 $key = array_rand($people);

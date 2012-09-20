@@ -12,6 +12,7 @@ $c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 	$uid_get = $c->get_uid();
 	$uid = $uid_get['uid'];
 	$friends = $c->friends_by_id($uid);
+	$friends = $friends['users'];
 	$friendsKey = array_rand($friends,3);
 	
 	$meting = "";
@@ -19,8 +20,7 @@ $c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 	{
 		$meting .= "@".$friends[$v]['name'].' ';
 	}
-	print_r($friends);
-	exit;
+	
 
 
 	// 发微博

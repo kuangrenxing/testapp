@@ -22,7 +22,8 @@ if(isset($_GET['nexturl']) == false || isset($_GET['baseurl']) == false)
 if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openkey'])) {//用户已授权
 
 	//我收听的人列表
-	$idollist = Tencent::api("friends/idollist");
+	
+	$idollist = Tencent::api("friends/idollist",array('reqnum'=>'50','startindex'=>'3'));
 	
 	$idollist = json_decode($idollist,true);
 	
