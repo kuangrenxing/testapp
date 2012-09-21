@@ -29,10 +29,12 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
 	
 
 	$_SESSION['idollist'] = $idollist;
+	
 	header('Location: '.$_GET['baseurl'].$_GET['nexturl']);
 	
 }
 else
 {
+	
 	header('Location: '.$_GET['baseurl']);
 }

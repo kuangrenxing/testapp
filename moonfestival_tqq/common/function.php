@@ -39,7 +39,7 @@ function imageWaterMark($groundImage,$waterPos=0,$waterImage="",$waterText="",$t
 	}
 	else
 	{
-		die("需要加水印的图片不存在！");
+		die($groundImage."需要加水印的图片不存在！");
 	}
 
 	//水印位置
@@ -119,6 +119,19 @@ function imageWaterMark($groundImage,$waterPos=0,$waterImage="",$waterText="",$t
 
 	if($isWaterImage)//图片水印
 	{
+		if( !empty($textColor) && (strlen($textColor)==7) )
+		{
+			$R = hexdec(substr($textColor,1,2));
+			$G = hexdec(substr($textColor,3,2));
+			$B = hexdec(substr($textColor,5));
+		}
+		else
+		{
+			die("水印文字颜色格式不正确！");
+		}
+		//加文字
+		ImageTTFText($ground_im, 20, 0, 255, 223, imagecolorallocate($ground_im, $R, $G, $B), "./src/ttf/msyhbd.ttf", $waterText);
+		//加水印
 		imagecopy($ground_im, $water_im, $posX, $posY, 0, 0, $water_w,$water_h);//拷贝水印到目标文件
 	}
 	else//文字水印

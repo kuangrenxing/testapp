@@ -32,6 +32,7 @@ class ReguserController extends Controller
 		$this->config['layoutEnabled'] = false;
 		
 		session_start();
+		
 		if(isset($_GET['afterurl']))
 			$afterurl = $_GET['afterurl'];
 		else

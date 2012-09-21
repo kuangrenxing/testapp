@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+.zttopic_tit{  margin-bottom:15px;}
+.zthot_topic{ width:950px; margin:15px auto 0px auto;}
+.zttopic_con a{ margin:0px 6px 8px 0px; display:inline-block;}
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+.BG2{ width:438px; height:572px; margin-left:auto; margin-right:auto; overflow:hidden;}
+.head{ width:438px; height:74px; overflow:hidden;}
+.logo{ margin-left:21px; margin-top:19px; display:block; float:left;}
+
+
+.content{ width:438px; height:498px; clear:both; background: url(../images/BG3_02.jpg) no-repeat; overflow:hidden;}
+.d1{ width:271px; height:286px; margin-left:158px; margin-top:80px;}
+.p2{ width:271px; height:70px; display:block; color:#FFF; font-size:30px;}
+.image{ display:block; margin-top:33px; margin-left:39px;}
+.p1{ font-size:31px; font-weight:bold; color:#ff7da8; display:block; margin-left:276px; margin-top:21px;}
+
+
+

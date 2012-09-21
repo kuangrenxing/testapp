@@ -31,12 +31,14 @@ $_SESSION['afterurl'] = BASEURL.'constellation.php';
                     <img title="" class="s1" src="src/images/img_start_06.jpg"/>
                 </div>
                 <div class="head2 ">
-                	<img src="src/images/img_03.jpg" title="非诚勿扰"/>
+                	<img src="src/images/img_03.jpg" title="嫦娥测试"/>
                 </div>
             </div>
             <div class="content">
-            	<p class="p1">看《非诚勿扰》时，是否也曾经想过，假如在屏幕上的男嘉宾是你，你能否带走你的心动女生。赶快来测试吧。</p>
-            	<a class="start" onclick="location_url();" href="javascript:void(0);" ><img src="src/images/img_14.png"/></a>
+            	<div class="d1">
+                  
+                    <a onclick="location_url();" href="javascript:void(0);" class="start"><img src="src/images/img_10.jpg"/></a>
+            	</div>
             </div>
         </div>            
   	</div>

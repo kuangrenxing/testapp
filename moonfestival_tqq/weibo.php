@@ -7,9 +7,15 @@ include 'common/function.php';
 session_start();
 
 if(isset($_SESSION['idollist']) == false)
+{	
+	$getidolisturl = TQQAPIURL."idollist.php?baseurl=".BASEURL."&nexturl=weibo.php";	
+	header("location: ".$getidolisturl);	
+	exit;	
+}
+if(isset($_SESSION['userinfo']['sex']) == false)
 {
-	$getidolisturl = TQQAPIURL."idollist.php?baseurl=".BASEURL."&nexturl=weibo.php";
-	header("location: ".$getidolisturl);
+	header("location: ".BASEURL);
+	exit;
 }
 
 $idollist = $_SESSION['idollist']['data']['info'];
@@ -26,10 +32,11 @@ foreach($idollist as $i=>$v)
 
 $idollistKey = array_rand($nsexIdollist,1);
 
-echo $niceringName = $nsexIdollist[$idollistKey]['name'];
-echo $nicering = $nsexIdollist[$idollistKey]['nick'];
+$niceringName = $nsexIdollist[$idollistKey]['name'];
+$nicering = $nsexIdollist[$idollistKey]['nick'];
 $niceringImg = $nsexIdollist[$idollistKey]['head'].'/180';
-exit;
+
+
 if($_SESSION['userinfo']['sex']==1)//男得用背景weibobgwoman.jpg
 {
 	$waterSBg = "src/watermark/weibobgwoman.jpg";
@@ -43,23 +50,24 @@ else
 	$_SESSION['title'] = "你的傻瓜“猪八戒”是".$nicering;
 }
 
-$waterImg = "src/watermark/water.jpg";//人像头图名
+$waterImg = "src/watermark/water".$_SESSION['userinfo']['uid'].".jpg";//人像头图名
 if(file_exists($waterbg))
 {
 	unlink($waterbg);
 }
-// copy($waterSBg, $waterbg);
-// if(file_exists($waterImg))
-// {
-// 	unlink($waterImg);
-// }
-// GetImage($niceringImg,$waterImg);
-// //文字水印
-// imageWaterMark($waterbg,10,$waterImg,$nicering,5,"#FF0000");
+copy($waterSBg, $waterbg);
+if(file_exists($waterImg))
+{
+	unlink($waterImg);
+}
+GetImage($niceringImg,$waterImg);
+//文字水印
+imageWaterMark($waterbg,10,$waterImg,$nicering,5,"#FFFF00");
 
 $_SESSION['nicering'] = $nicering;
 $_SESSION['niceringImg'] = $niceringImg;
-
+$_SESSION['waterbg'] = $waterbg;
+$_SESSION['waterImg'] = $waterImg;
 
 
 $content = "刚刚玩了一个非常有趣的测试，原来我朝思暮想的“嫦娥”是 @$niceringName ，大家赶快一起来测测谁是你的嫦娥吧，".BASEURL."（网址），并祝大家中秋快乐。";
@@ -75,7 +83,7 @@ $url = BASEURL.'result.php';
 //echo "LLLL";exit;
 header("location: ".$url);
 //print_r($_SESSION['nicering']);
- exit;
+
 
 
 

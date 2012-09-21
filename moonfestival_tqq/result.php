@@ -6,18 +6,23 @@ session_start();
 
 if(isset($_SESSION['nicering']) == false)
 {
+	if(isset($_SESSION['idollist']) == false)
+	{
+		echo "NO idollist";exit;
+	}
+	
 	header("location: ".BASEURL);
+	exit;
 }
 
-if(file_exists($_SESSION['weiboimg']))
-	unlink($_SESSION['weiboimg']);
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>结果 嫦娥测试-测试小应用-拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf-8"    src="http://fusion.qq.com/fusion_loader?appid=<?php echo "100648214";?>&platform=qzone"></script>
 </head>
@@ -71,19 +76,33 @@ $(function(){
 		  // hosting应用要求将图片存放在APP域名下或腾讯CDN
 		  // non-hosting应用要求将图片上传到该应用开发者QQ号对应的QQ空间加密相册中。 
 		  // 即non-hosting应用图片域名必须为：qq.com、pengyou.com、qzoneapp.com、qqopenapp.com、tqapp.cn。
-		  pics :"<?php echo $_SESSION['niceringImg'];?>",
+		  pics :"<?php if(file_exists($_SESSION['waterbg'])) echo BASEURL.$_SESSION['waterbg']; else echo $_SESSION['niceringImg'];?>",
 
 		  // 可选。透传参数，用于onSuccess回调时传入的参数，用于识别请求。
 		  context:"share",
 
 		  // 可选。用户操作后的回调方法。
-		  onSuccess : function (opt) {    },
+		  onSuccess : function (opt) {  
+		 
+
+	  	  },
 
 		  // 可选。用户取消操作后的回调方法。
 		  onCancel : function (opt) {  },
 
 		  // 可选。对话框关闭时的回调方法。
-		  onClose : function () {  }
+		  onClose : function () {  
+			  $.post(
+						"rmimg.php",
+						{ image: "<?php echo $_SESSION['waterbg'];?>",
+							waterImg:"<?php echo $_SESSION['waterImg']; ?>"
+							},
+						function(data){
+							
+						}
+					  );
+
+			  }
 
 		});
 		
