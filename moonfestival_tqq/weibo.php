@@ -11,6 +11,7 @@ if(isset($_SESSION['idollist']) == false)
 	$getidolisturl = TQQAPIURL."idollist.php?baseurl=".BASEURL."&nexturl=weibo.php";
 	header("location: ".$getidolisturl);
 }
+
 $idollist = $_SESSION['idollist']['data']['info'];
 //我的异性好友
 $mynsex =  $_SESSION['userinfo']['sex']==1 ? 2 : 1;
@@ -25,10 +26,10 @@ foreach($idollist as $i=>$v)
 
 $idollistKey = array_rand($nsexIdollist,1);
 
-$niceringName = $nsexIdollist[$idollistKey]['name'];
-$nicering = $nsexIdollist[$idollistKey]['nick'];
+echo $niceringName = $nsexIdollist[$idollistKey]['name'];
+echo $nicering = $nsexIdollist[$idollistKey]['nick'];
 $niceringImg = $nsexIdollist[$idollistKey]['head'].'/180';
-
+exit;
 if($_SESSION['userinfo']['sex']==1)//男得用背景weibobgwoman.jpg
 {
 	$waterSBg = "src/watermark/weibobgwoman.jpg";
@@ -71,9 +72,10 @@ $_SESSION['weiboimg'] = $pic_url;
 // $url = TQQAPIURL."weibo.php?baseurl=".BASEURL."&content=$content&pic_url=$pic_url&nexturl=$nexturl";
 
 $url = BASEURL.'result.php';
+//echo "LLLL";exit;
 header("location: ".$url);
-
-
+//print_r($_SESSION['nicering']);
+ exit;
 
 
 

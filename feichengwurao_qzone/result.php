@@ -32,7 +32,7 @@ $key = $_GET['key'];
 <div style="clear:both; width:370px; height:215px; margin-top:40px; margin-left:208px;">
 <img style="float:left;" src="src/images/<?php echo $people[$key]['avatar'];?>" title="<?php echo $people[$key]['name'];?>"/>
 <div class="d6">
-<a target="_blank" href="http://user.qzone.qq.com/"><img src="src/images/welldone_06.jpg"/></a>
+<a target="_blank" href="http://www.tuolar.com"><img src="src/images/welldone_06.jpg"/></a>
 <a href="<?php echo BASEURL;?>"><img src="src/images/welldone_09.jpg"/></a>
 </div>
 </div>

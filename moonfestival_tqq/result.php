@@ -1,10 +1,14 @@
 <?php 
+include 'common/define.php';
+include 'common/config.php';
+include 'common/function.php';
 session_start();
+
 if(isset($_SESSION['nicering']) == false)
 {
 	header("location: ".BASEURL);
 }
-//echo $_SESSION['weiboimg'];
+
 if(file_exists($_SESSION['weiboimg']))
 	unlink($_SESSION['weiboimg']);
 ?>
