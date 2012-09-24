@@ -41,7 +41,7 @@ function location_url(){
 	var url = "<?php echo BASEURL;?>";	
 	var qqurl = "http://www.tuolar.com/apps/qq/qq/";	
 	
-	window.location.href= qqurl+"?url="+url+"song.php";		
+	window.location.href= qqurl+"?url="+url+"song.php&type=324";		
 	
 }
 </script>

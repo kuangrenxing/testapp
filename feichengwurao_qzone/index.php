@@ -3,8 +3,9 @@ session_start();
 include_once 'common/define.php';
 
 $qqurl = "http://www.tuolar.com/apps/qq/qq/";
+//$qqurl = "http://testapp.dev/qq/";
 $nextFile = "constellation.php";
-$url = $qqurl."?url=".BASEURL.$nextFile;
+$url = $qqurl."?url=".BASEURL.$nextFile."&type=".WB_APP_CONN_WEIFUSHI;
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
