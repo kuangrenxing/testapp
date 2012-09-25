@@ -1,15 +1,28 @@
 <?php
-include 'common/define.php';
+session_start();
+include_once 'common/define.php';
+
+
+if(isset($_SESSION['code_url']) == false)
+{
+	// 生成授权url $_SESSION['code_url'];
+	header("Location: ".APIURL."?WB_CALLBACK_URL=".WB_CALLBACK_URL."&nexturl=".BASEURL);
+	exit;
+}
+
+
+//下一页url
+$_SESSION['afterurl'] = BASEURL.'choice.php';
+$_SESSION['WB_APP_CONN_WEIFUSHI'] = WB_APP_CONN_WEIFUSHI;
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>嫦娥测试-测试小应用-拖拉网</title>
+<title><?php echo TITLE;?></title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
-
 </head>
- 
 <body id="ztBodyBg">
 <div id="ztcontainer">
     <div id="ztcontent">
@@ -20,27 +33,19 @@ include 'common/define.php';
                     <img title="" class="s1" src="src/images/img_start_06.jpg"/>
                 </div>
                 <div class="head2 ">
-                	<img src="src/images/img_03.jpg" title="嫦娥测试"/>
+                	<img src="src/images/finger_03.jpg" title="指纹测试"/>
                 </div>
             </div>
             <div class="content">
-            	<div class="d1">
-                  
-                    <a hidefocus="true" onclick="location_url();" href="javascript:void(0);" class="start"><img src="src/images/img_10.jpg"/></a>
-            	</div>
+            	<a hidefocus="true"  class="start" href="<?php echo $_SESSION['code_url'];?>"><img src="src/images/finger_07.jpg" title="开始测试"/></a>
             </div>
         </div>            
   	</div>
   	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
 </div>
-<script language="javascript">
-function location_url(){
-	var url = "<?php echo BASEURL;?>";
-	var apiurl = "<?php echo TQQAPIURL;?>";		
-	var wb_app_conn_weifushi = "<?php echo WB_APP_CONN_WEIFUSHI;?>";
-	
-	window.location.href= apiurl+"authorization.php?afterurl="+url+"weibo.php&wb_app_conn_weifushi="+wb_app_conn_weifushi;	
-}
-</script>
+
+
+
+
 </body>
 </html>
