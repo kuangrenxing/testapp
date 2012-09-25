@@ -145,7 +145,7 @@ function getResult($count,$left,$right)
 		elseif($left==$right)
 		{
 			$assess = "善良。中年之前运气不佳，需1个螺相助才能变背运为幸运。在爱情方面幻想多于行动。 ";
-			$keywords = "善良爱幻想";
+			$keywords = "善良";
 			$image = "test_83.jpg";
 		}
 		$collocation='2个螺、4个螺、7个螺、10个螺。';

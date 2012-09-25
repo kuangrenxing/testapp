@@ -23,7 +23,7 @@ $c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 	$uid_get = $c->get_uid();
 	$uid = $uid_get['uid'];
 	
-	//关注
+	//关注 tuolar.com
 	$follow = $c->follow_by_id("1761623191");
 
 	
