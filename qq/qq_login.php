@@ -1,7 +1,8 @@
 <?php
 	if(isset($_GET["oauth_qqzone"])){
 		if($_GET["oauth_qqzone"] == 1){
-			header('Location:/apps/qq/qq/oauth/qq_login.php');
+			header('Location:/qq/oauth/qq_login.php');
+// 			header('Location:/apps/qq/qq/oauth/qq_login.php');
 			exit;
 		}
 	}

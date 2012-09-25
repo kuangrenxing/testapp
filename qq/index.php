@@ -10,6 +10,7 @@ if(isset($_GET['type'])){
 if(isset($_GET['txt'])){
 	$_SESSION['TXT_CESHI'] = $_GET['txt'];
 }
-print_r($_SESSION);exit;
-header('Location:/apps/qq/qq/qq_login.php?oauth_qqzone=1');
+
+// header('Location:/apps/qq/qq/qq_login.php?oauth_qqzone=1');
+header('Location:/qq/qq_login.php?oauth_qqzone=1');
 ?>

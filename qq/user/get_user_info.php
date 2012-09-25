@@ -2,6 +2,7 @@
 require_once("../comm/config.php");
 require_once("../comm/utils.php");
 
+
 function get_user_info()
 {
     $get_user_info = "https://graph.qq.com/user/get_user_info?"
@@ -26,7 +27,8 @@ $openid = $_SESSION["openid"];
 $nickname = $userinfo["nickname"];
 $headimg = $userinfo['figureurl_2']."/.jpg";
 $gender = $userinfo["gender"] == "男" ? 1 : 2;
-
-header('Location:http://www.tuolar.com/apps/qq/qq/user3.php?openid='.rawurlencode($openid)."&gender=".rawurlencode($gender)."&nickname=".rawurlencode($nickname)."&headimg=".rawurlencode($headimg));
+print_r($_SESSION);
+exit;
+header('Location:http://apptest.tuolar.com/qq/qq/user3.php?openid='.rawurlencode($openid)."&gender=".rawurlencode($gender)."&nickname=".rawurlencode($nickname)."&headimg=".rawurlencode($headimg));
 
 ?>
