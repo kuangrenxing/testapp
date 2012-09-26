@@ -1,23 +1,21 @@
 <?php
 include 'common/define.php';
 require_once('./functions.php');
-require_once("../qq/comm/config.php");
+require_once("comm/config.php");
 
 //图片在该应用的路径
 $hourPath='src/images';
-//本应用url
-$baseUrl=BASEURL;
 
-if(isset($_GET['artist']) == false)
+
+//应该传来的参数
+if(isset($_GET['nexturl']) == false)
 {
-	header("Location: ".BASEURL);
+	echo "关注后不知道下一页面到哪里了";
 	exit;
 }
-//检查授权
-if(!isset($_SESSION["access_token"])){
-	header('Location:'.$baseUrl);
-	exit;
-}
+
+$nexturl = $_GET['nexturl'];
+
 //是否已收听 为1表示已经收听
 $arr = array(
 	"access_token" => $_SESSION["access_token"],
@@ -27,7 +25,6 @@ $arr = array(
 $result = check_fans($arr);
 
 //已经授权 跳到下一页面
-$nexturl = "attention.php?artist=".$_GET['artist'];
 if($result['isfans'] == 1)
 {
 	header("location: ".$nexturl);
@@ -38,7 +35,7 @@ if($result['isfans'] == 1)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>非诚勿扰-测试小应用-拖拉网</title>
+<title>关注 应用小测试 - 拖拉网</title>
 <style type="text/css">
 body,p,h1,h2,h3,h4,h5,h6,dd,dl,dt,form,th,td,ul,li,ol,p,input,select,textarea,button{ margin:0;padding:0;}
 input,select,textarea{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
@@ -95,7 +92,7 @@ function vResult(){
 	if(b_flag == '0'){
 		$.ajax({
 			type:'post',
-			url:'doAjax.php',
+			url:'fans/check_fans.php',
 			cache:false,
 			data:'',
 			success:function(data){

@@ -1,6 +1,6 @@
 <?php
 include 'common/define.php';
-require_once('./functions.php');
+require_once('../functions.php');
 require_once("../qq/comm/config.php");
 
 //图片在该应用的路径
