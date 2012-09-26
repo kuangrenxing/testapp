@@ -1,11 +1,6 @@
 <?php
-include 'common/define.php';
 require_once('./functions.php');
 require_once("comm/config.php");
-
-//图片在该应用的路径
-$hourPath='src/images';
-
 
 //应该传来的参数
 if(isset($_GET['nexturl']) == false)
@@ -13,7 +8,11 @@ if(isset($_GET['nexturl']) == false)
 	echo "关注后不知道下一页面到哪里了";
 	exit;
 }
-
+//检查授权
+if(!isset($_SESSION["access_token"])){
+	echo "授权已经失效，请重新登录.";
+	exit;
+}
 $nexturl = $_GET['nexturl'];
 
 //是否已收听 为1表示已经收听
