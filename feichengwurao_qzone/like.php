@@ -4,11 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>喜欢什么类型的女生？-非诚勿扰-测试小应用-拖拉网</title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript"> 
-window.onload=function(){ 
-for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=function(){this.blur()} 
-} 
-</script>
+
 </head>
  
 <body id="ztBodyBg">
@@ -28,17 +24,17 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
             	<h1 class="style">5.喜欢什么类型的女生？</h1>
                 <div style="clear:both;width:272px; height:245px; margin-left:270px; margin-top:40px; ">
                 	<div class="d5">
-               		<a href="weibo.php" style="width:59px; height:36px;"><img src="src/images/style_03.jpg" title="萝莉"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_09.jpg" title="文静乖巧"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_15.jpg" title="活波可爱"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_19.jpg" title="独立自主"/></a>
+               		<a href="guanzhu.php" style="width:59px; height:36px;"><img src="src/images/style_03.jpg" title="萝莉"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_09.jpg" title="文静乖巧"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_15.jpg" title="活波可爱"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_19.jpg" title="独立自主"/></a>
                     </div>
                
                     <div class="d5">
-               		<a href="weibo.php" style="width:59px; height:36px;"><img src="src/images/style_05.jpg" title="御姐"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_11.jpg" title="热辣奔放"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_16.jpg" title="淡然优雅"/></a>
-                    <a href="weibo.php" style="width:97px; height:36px;"><img src="src/images/style_20.jpg" title="小鸟依人"/></a>
+               		<a href="guanzhu.php" style="width:59px; height:36px;"><img src="src/images/style_05.jpg" title="御姐"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_11.jpg" title="热辣奔放"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_16.jpg" title="淡然优雅"/></a>
+                    <a href="guanzhu.php" style="width:97px; height:36px;"><img src="src/images/style_20.jpg" title="小鸟依人"/></a>
                     </div>
                 </div>
                 

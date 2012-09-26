@@ -1,6 +1,6 @@
 <?php
 include 'common/define.php';
-require_once('./functions.php');
+require_once('../functions.php');
 require_once("../qq/comm/config.php");
 
 //图片在该应用的路径
@@ -8,10 +8,9 @@ $hourPath='src/images';
 //本应用url
 $baseUrl=BASEURL;
 
-//应该传来的参数
-if(isset($_GET['left']) == false || isset($_GET['right']) == false)
+if(isset($_GET['artist']) == false)
 {
-	header("location: ".BASEURL);
+	header("Location: ".BASEURL);
 	exit;
 }
 //检查授权
@@ -28,7 +27,7 @@ $arr = array(
 $result = check_fans($arr);
 
 //已经授权 跳到下一页面
-$nexturl = "weibo.php?left=".$_GET['left']."&right=".$_GET['right'];
+$nexturl = "attention.php?artist=".$_GET['artist'];
 if($result['isfans'] == 1)
 {
 	header("location: ".$nexturl);
@@ -39,7 +38,7 @@ if($result['isfans'] == 1)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo TITLE;?></title>
+<title>非诚勿扰-测试小应用-拖拉网</title>
 <style type="text/css">
 body,p,h1,h2,h3,h4,h5,h6,dd,dl,dt,form,th,td,ul,li,ol,p,input,select,textarea,button{ margin:0;padding:0;}
 input,select,textarea{font-family:Arial, Helvetica, sans-serif; font-size:12px;}

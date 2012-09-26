@@ -68,7 +68,7 @@ for(var ii=0; ii<document.links.length; ii++) document.links[ii].onfocus=functio
                     	<?php if(array_key_exists($i, $artistKey)):?>                    	
                     	<div class="box">
                         	<div class="d2"><img src="<?php echo $v['avatar'];?>"/>
-                            	 <a href="attention.php?artist=<?php echo $i;?>" ><img src="src/images/images_11.jpg"/></a>		
+                            	 <a href="guanzhu.php?artist=<?php echo $i;?>" ><img src="src/images/images_11.jpg"/></a>		
                             </div>
                             <p><?php echo $v['content'];?></p>
                         </div>
