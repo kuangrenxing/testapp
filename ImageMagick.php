@@ -3,7 +3,11 @@
 * 基于MagickWand的图片缩略图程序， php magick thumb
 * 用法：直接调用 magick_thumb函数，传入参数：
 * magick_thumb($src_image_dir.$src_image,$dst_thumb_dir.$dst_image,100,100,1);
-* $src_file ： 原文件路径 , $dst_file ：保存文件路径 , $dst_width ：生成文件宽 , $dst_height：生成文件高，$mode=1 裁剪方式
+* $src_file ： 原文件路径 , 
+* $dst_file ：保存文件路径 , 
+* $dst_width ：生成文件宽 , 
+* $dst_height：生成文件高，
+* $mode=1 裁剪方式
 * GIF动画缩略到不大于传入的高宽值，并且保留动画效果，GIF非动画格式和其他格式一样处理。
 * 参数 $mode 说明：
 * $mode=0 ：生成固定宽度的图像，并且以缩放后的实际大小保持。
