@@ -5,6 +5,7 @@ include 'common/config.php';
 
 session_start();
 
+
 if(isset($_SESSION['idollist']) == false)
 {
 	//得到我收听的人列表保存$_SESSION['idollist']
@@ -21,19 +22,17 @@ foreach($idollistKey as $i=>$v)
 	$meting .= "@".$idollist[$v]['name'].' ';
 }
 
-//微博内容
-$content = "";
 
-$pic_url = BASEURL."";
+$content = "【钓鱼岛】钓鱼岛  中国的！！！".$_GET['content'].$meting;
+
+$pic_url = BASEURL.'src/images/'.$_SESSION['image'];
+
+
 //下一页面 可不用加http:// 则会自动加BASEURL
-$nexturl = "result.php";
-
-
-//结果参数 传给结果页
-$_SESSION['key'] = $key;
-
+$nexturl = "http://www.tuolar.com";
 		
 $url = APIURL."weibo.php?baseurl=".BASEURL."&content=$content&pic_url=$pic_url&nexturl=$nexturl";
+
 header("location: ".$url);
 exit;
 

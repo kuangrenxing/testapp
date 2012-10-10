@@ -32,11 +32,6 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
 	
 	
 	// 发微博
-// 		if(isset($_REQUEST['content']) == false || isset($_REQUEST['pic_url']) == false)
-// 		{
-// 			echo 'content or pic_url is null';
-// 			exit;
-// 		}
 	$content = $_GET['content'];
 	$pic_url = $_GET['pic_url'];
 
@@ -48,11 +43,20 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
 	$add = Tencent::api('t/add_pic_url', $params, 'POST');
 	$add = json_decode($add, true);
 
+	if(stripos($_GET['nexturl'], "http") !== false)
+	{
+		$nexturl = $_GET['nexturl'];
+	}
+	else
+	{
+		$nexturl = $_GET['baseurl'].$_GET['nexturl'];
+	}
 	
-	header('Location: '.$_GET['baseurl'].$_GET['nexturl']);
-	
+	header('Location: '.$nexturl);
+	exit;	
 }
 else
 {
 	header('Location: '.$_GET['baseurl']);
+	exit;
 }
