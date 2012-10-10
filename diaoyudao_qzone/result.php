@@ -101,7 +101,7 @@ $_SESSION['image'] = $image;
                     	<p class="p5"><span>把结果分享到QQ：</span><a href="<?php echo BASEURL;?>">重新测试</a></p>
                         <textarea   class="yijian J_content" name="content" style="resize: none;height:92px; overflow-y:scroll; width:222px; vertical-align: top; text-align:left; line-height:13px; margin-top:10px; font-size:13px;" /><?php echo $content.BASEURL;?>（网址）</textarea>
                         <p class="p6">还可以输入<span id="J_keycount">50</span>个字符</p>
-                        <a href="<?php echo BASEURL.'weibo.php'?>" class="kankan J_kankan"><img src="src/images/110x30.jpg"/></a>
+                        <a href="#" class="kankan J_kankan"><img src="src/images/110x30.jpg"/></a>
                     </div>
                     </form>
                 </div>
@@ -117,6 +117,7 @@ $_SESSION['image'] = $image;
 $(function(){
 	$(".J_kankan").click(function(){
 		$("#form1").submit();
+		return false;
 		});
 	$(".J_content").keyup(function(){
 		var content = $(".J_content").val();
