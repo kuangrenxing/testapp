@@ -5,6 +5,10 @@ include 'common/config.php';
 
 session_start();
 
+//当传来参数时，进行保存，要在得到收听列表前
+// if(isset($_GET['content']))
+// 	$_SESSION['content'] = $_GET['content'];
+
 if(isset($_SESSION['idollist']) == false)
 {
 	//得到我收听的人列表保存$_SESSION['idollist']

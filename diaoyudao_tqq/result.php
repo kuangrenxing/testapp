@@ -3,6 +3,8 @@ include_once 'common/define.php';
 include_once 'common/config.php';
 session_start();
 
+
+
 if(isset($_SESSION['one']) == false || isset($_SESSION['two']) == false || isset($_SESSION['three']) == false)
 {
 	header("Location: ".BASEURL);
@@ -64,6 +66,11 @@ elseif ($one == "d")
 	$content = $result['9']['content'];
 	$image = $result['9']['image'];
 }
+else 
+{
+	$content = $result['9']['content'];
+	$image = $result['9']['image'];
+}
 
 $_SESSION['image'] = $image;
 
@@ -91,12 +98,14 @@ $_SESSION['image'] = $image;
          	<div class="share">
             	<div class="share_up">
                 	<img src="src/images/<?php echo $image;?>"/>
+                	<form action="weibo.php" method="get" id="form1" >
                     <div class="share_detail right">
                     	<p class="p5"><span>把结果分享到QQ：</span><a href="<?php echo BASEURL;?>">重新测试</a></p>
-                        <textarea   class="yijian J_content" style="resize: none;height:92px; overflow-y:scroll; width:222px; vertical-align: top; text-align:left; line-height:13px; margin-top:10px; font-size:13px;" /><?php echo $content.BASEURL;?>（网址）</textarea>
+                        <textarea   class="yijian J_content" name="content" style="resize: none;height:92px; overflow-y:scroll; width:222px; vertical-align: top; text-align:left; line-height:13px; margin-top:10px; font-size:13px;" /><?php echo $content.BASEURL;?>（网址）</textarea>
                         <p class="p6">还可以输入<span id="J_keycount">50</span>个字符</p>
-                        <a href="<?php echo BASEURL.'weibo.php'?>" class="kankan J_kankan"><img src="src/images/110x30.jpg"/></a>
+                        <a href="#" class="kankan J_kankan"><img src="src/images/110x30.jpg"/></a>
                     </div>
+                    </form>
                 </div>
                 <p class="p7"><?php echo $content;?></p>
             </div>
@@ -109,9 +118,7 @@ $_SESSION['image'] = $image;
 <script>
 $(function(){
 	$(".J_kankan").click(function(){
-		var content = $(".J_content").val();
-		location.href="<?php echo BASEURL.'weibo.php'?>?content="+content;
-		return false;
+		$("#form1").submit();
 		});
 	$(".J_content").keyup(function(){
 		var content = $(".J_content").val();

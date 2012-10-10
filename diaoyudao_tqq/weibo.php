@@ -5,6 +5,8 @@ include 'common/config.php';
 
 session_start();
 
+if(isset($_GET['content']))
+$_SESSION['content'] = $_GET['content'];
 
 if(isset($_SESSION['idollist']) == false)
 {
@@ -23,7 +25,7 @@ foreach($idollistKey as $i=>$v)
 }
 
 
-$content = "【钓鱼岛】钓鱼岛  中国的！！！".$_GET['content'].$meting;
+$content = "【钓鱼岛】钓鱼岛  中国的！！！".$_SESSION['content'].$meting;
 
 $pic_url = BASEURL.'src/images/'.$_SESSION['image'];
 
