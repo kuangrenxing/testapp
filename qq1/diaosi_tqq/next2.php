@@ -29,8 +29,8 @@ include_once 'common/define.php';
             <p class="question"><label><input type="checkbox" name="ck8" class="bingo" /><span><i>8.</i> 喜欢看小说，特别是YY小说休闲小说。经常把自己幻想成小说或者电影里的英雄，                              
      身边木耳环绕。   </span></label></p>
             <p class="question"><label><input type="checkbox" name="ck9" class="bingo" /><span><i>9.</i> 不敢进入高档的美发屋和装修华丽的餐厅。</span></label></p>
-            <p class="question"><label><input type="checkbox" name="ck10" class="bingo" /><span><i>10.</i>  坐位置一定要选在后面，迟到了总想从后门进。 </span>></label></p>
-            <a class="jixu" href=""><img src="src/images/118x46.png"/></a>
+            <p class="question"><label><input type="checkbox" name="ck10" class="bingo" /><span><i>10.</i>  坐位置一定要选在后面，迟到了总想从后门进。 </span></label></p>
+           
             <input type="submit" class="jixu" value="" />
             </form>
          </div>        

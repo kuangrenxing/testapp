@@ -26,7 +26,7 @@ $code_url = APIURL."authorization.php?afterurl=".$nexturl."&wb_app_conn_weifushi
          </div>  
          <div class="main1">
          	<p class="diaosi">我是屌丝，我怕谁，真屌丝，不做表面功夫！测一测你是属于哪种屌丝吧。</p>
-         	<a class="kaishi"><img src="../../assets_testapp/diaosi/images/244x58.jpg"/></a>
+         	<a href="<?php echo $code_url?>" class="kaishi"><img src="../../assets_testapp/diaosi/images/244x58.jpg"/></a>
          </div>        
   	</div>
     </div>

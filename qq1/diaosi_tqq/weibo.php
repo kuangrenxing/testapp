@@ -19,22 +19,20 @@ $idollistKey = array_rand($idollist,3);
 $meting = "";
 foreach($idollistKey as $i=>$v)
 {
-	$meting .= "@".$idollist[$v]['name'].' ';
+	$meting .= " @".$idollist[$v]['name'];
 }
 
-//微博内容
-$content = "";
+$_SESSION['meting'] = $meting;
 
-$pic_url = BASEURL."";
 //下一页面 可不用加http:// 则会自动加BASEURL
 $nexturl = "result.php";
 
-
+$key = array_rand($result);
 //结果参数 传给结果页
 $_SESSION['key'] = $key;
 
 		
-$url = APIURL."weibo.php?baseurl=".BASEURL."&content=$content&pic_url=$pic_url&nexturl=$nexturl";
+$url = $nexturl."?key=$key";
 header("location: ".$url);
 exit;
 
