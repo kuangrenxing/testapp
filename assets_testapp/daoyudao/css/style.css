@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:610px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:91px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:28px; background:url(../images/img_start_06.jpg); margin-top:30px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background:url(../images/227x77.jpg) no-repeat; width:227px; height:77px;}
+
+.main1{ background:url(../images/bg1.jpg) no-repeat; width:100%; height:496px; overflow:hidden; clear:left; margin-top:10px;}
+.kaishi{ display:block; width:243px; height:55px; margin-top:288px; margin-left:323px;}
+
+/*测试题页面*/
+.main2{background:url(../images/bg2.jpg) no-repeat; width:100%; height:496px; overflow:hidden; clear:left; margin-top:10px;}
+.d1{ margin-top:8px;}
+
+.p1{ font-size:20px; color:#014469; display:block; width:405px; height:25px; margin-top:96px; margin-left:316px; font-weight:bold;}
+.item1{ width:351px; height:183px; margin-left:342px; margin-top:19px;}
+.item1_a{ width:330px; height:34px; background-positon:;background:url(../images/question1.jpg); display:block;}
+.item1_b{ width:251px; height:34px;  background:url(../images/question1.jpg) 0 -45px; display:block;}
+.item1_c{ width:269px; height:34px; background:url(../images/question1.jpg) 0 78px; display:block;}
+.item1_d{ width:110px; height:34px; background:url(../images/question1.jpg) 0 36px; display:block;}
+
+
+.p2{ font-size:20px; color:#014469; display:block; width:459px; height:53px; margin-top:96px; margin-left:316px; font-weight:bold;}
+.item2{ width:351px; height:183px; margin-left:342px; margin-top:19px;}
+.item2_a{ width:250px; height:34px; background-positon:;background:url(../images/question2.jpg); display:block;}
+.item2_b{ width:340px; height:34px;  background:url(../images/question2.jpg) 0 -45px; display:block;}
+.item2_c{ width:240px; height:34px; background:url(../images/question2.jpg) 0 123px; display:block;}
+.item2_d{ width:252px; height:34px; background:url(../images/question2.jpg) 0 80px; display:block;}
+.item2_e{width:72px; height:34px; background:url(../images/question2.jpg) 0 36px; display:block;}
+
+.p3{ font-size:20px; color:#014469; display:block; width:459px; height:53px; margin-top:96px; margin-left:316px; font-weight:bold;}
+.item3{ width:351px; height:183px; margin-left:342px; margin-top:19px;}
+.item3_a{ width:179px; height:34px; background-positon:;background:url(../images/question3.jpg); display:block;}
+.item3_b{ width:207px; height:34px;  background:url(../images/question3.jpg) 0 -45px; display:block;}
+.item3_c{ width:237px; height:34px; background:url(../images/question3.jpg) 0 78px; display:block;}
+.item3_d{ width:74px; height:34px; background:url(../images/question3.jpg) 0 35px; display:block;}
+
+
+.main4{ background:url(../images/bg3.jpg) no-repeat; width:100%; height:496px; overflow:hidden; clear:left; margin-top:10px;}
+.share{ width:411px; height:239px; margin-left:307px; margin-top:112px;}
+.share_up{ width:411px; height:186px;}
+.share_up img{ float:left;}
+.share_detail{ width:222px; height:186px;}
+.p5{ font-size:14px; height:20px; line-height:20px; font-weight:bold;}
+.p5 span{ color:#4f6e9f; float:left;}
+.p5 a{ color: #000; text-decoration:underline; float:right;}
+.yijian{ height:92px; overflow-y:scroll; width:222px; vertical-align: top; text-align:left; line-height:13px; margin-top:10px; font-size:13px;}
+.p6{ margin-top:5px; font-size:12px; color:#014469; height:12px; text-align:right;}
+.p6 span{ color:red;}
+.kankan{ width:110px; height:30px; display:block; float:right; margin-top:10px;}
+.p7{ font-size:12px; font-weight:bold; color:#264d8b; margin-top:20px;}
+
+
+
+
+/*结果页面*/
+/*.box2{ width:438px; height:572px; margin-left:auto; margin-right:auto;}
+.head2{ width:100%; height:74px; overflow:hidden;}
+.logo2{ display:block; width:134px; height:42px; background:url(../images/logo2.jpg); margin-left:10px; margin-top:20px; }
+.more{ background:url(../images/test_06.jpg); width:138px; height:39px; display:block; margin-top:20px;}
+.main3{ clear:left; background:url(../images/bg4.jpg); width:438px; height:498px; overflow:hidden;}
+.inner_jieguo{ width:362px; height:187px; margin-top:155px; height:187px; margin-left:41px;}
+.inner_jieguo img{float:left;}
+.p4{ display:block; float:left; width:168px; color:#FFF; font-size:16px; margin-left:14px;}
+*/
+
+
+
+
+
+
+
+

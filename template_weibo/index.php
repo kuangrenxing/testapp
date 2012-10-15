@@ -14,11 +14,12 @@ if(isset($_SESSION['code_url']) == false)
 $_SESSION['afterurl'] = BASEURL.'choice.php';
 $_SESSION['WB_APP_CONN_WEIFUSHI'] = WB_APP_CONN_WEIFUSHI;
 
+$code_url = $_SESSION['code_url'];
 ?>
 
 <title><?php echo TITLE;?></title>
 
-<?php echo $_SESSION['code_url'];?>">
+<?php echo $code_url;?>
 
 
 
