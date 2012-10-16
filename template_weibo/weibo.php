@@ -24,7 +24,7 @@ $friendsKey = array_rand($friends,3);
 $meting = "";
 foreach($friendsKey as $i=>$v)
 {
-	$meting .= "@".$friends[$v]['name'].' ';
+	$meting .= " @".$friends[$v]['name'];
 }
 
 
