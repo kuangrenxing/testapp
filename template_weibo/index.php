@@ -11,7 +11,7 @@ if(isset($_SESSION['code_url']) == false)
 
 
 //下一页url
-$_SESSION['afterurl'] = BASEURL.'choice.php';
+$_SESSION['afterurl'] = BASEURL.'next.php';
 $_SESSION['WB_APP_CONN_WEIFUSHI'] = WB_APP_CONN_WEIFUSHI;
 
 $code_url = $_SESSION['code_url'];

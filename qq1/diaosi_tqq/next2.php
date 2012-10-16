@@ -9,7 +9,7 @@ include_once 'common/define.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo TITLE;?></title>
-<link href="../../assets_testapp/diaosi/css/style.css" rel="stylesheet" type="text/css" />
+<link href="src/css/style.css" rel="stylesheet" type="text/css" />
 </head>
  
 <body id="ztBodyBg">

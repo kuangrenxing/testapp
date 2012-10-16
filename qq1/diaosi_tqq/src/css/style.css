@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+a{ outline:none;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:610px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:91px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:27px; background: url(../images/103x27.jpg); margin-top:30px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background: url(../images/191x27.jpg) no-repeat; width:191px; height:27px; margin-top:30px;}
+
+.main1{ background: url(../images/bg.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.kaishi{ display:block; width:243px; height:55px; margin-top:25px; margin-left:auto; margin-right:auto;}
+/*屌丝独有*/
+.diaosi{ width:506px; height:70px; margin-left:auto; margin-right:auto; margin-top:41px; font-size:28px; color:#002985;}
+
+
+/*测试题页面*/
+.main2{background: url(../images/bg2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.d1{ margin-top:8px;}
+.diaosi1{ width:431px; height:38px; display:block; margin-left:auto; margin-right:auto; font-size:28px; color:#002985; margin-top:43px; margin-bottom:27px;}
+.question{ width:700px; height:22px; display:block; margin-left:auto; margin-right:auto; color:#002985; font-weight:bold; margin-top:13px; line-height:22px;}
+.question .bingo{ width:19px; height:19px; display:block; float:left; vertical-align:middle; margin-top:5px;}
+.question span{ width:641px; height:22px; display:block; float:left; margin-left:22px; font-size:18px; margin-bottom:36px;}
+.question span i{ font-style:italic; font-size:25px;}
+.t1{width:161px; height:44px; margin-left:auto; margin-right:auto; margin-top:38px;}
+.result{ width:384px; height:290px; float:left; margin-left:28px; margin-top:22px;}
+.p1{ font-size:18px; font-weight:bold; color:#0c3b9c;}
+.p2{ font-size:14px;}
+
+.fenxiang{ width:323px; height:289px; float:left; margin-left:25px; margin-top:22px;}
+.d2{ width:323px; height:152px; resize:none; float:left; font-size:14px; text-align:left; vertical-align:top;}
+.weibo{ width:133px; height:32px; float:left; margin-top:14px; background: url(../images/133x32.jpg) no-repeat; cursor:pointer;}
+.qq{ width:133px; height:32px; float:left; margin-top:14px; background: url(../images/133x32_2.png) no-repeat; cursor:pointer;}
+.p3{ width:172px; height:19px; font-size:16px; display:block; float:left; margin-top:21px; margin-left:17px;}
+
+.p3 span{ color:red;}
+.p3_2{ width:188px; height:19px; font-size:16px; display:block; float:left; margin-bottom:10px;}
+.try{ width:600px; height:47px; margin-left:25px; margin-top:; float:left;}
+.a1{ width:196px; height:47px; float:left; display:block; }
+.a2{ width:148px; height:47px; float:left; display:block; margin-left:10px; }
+.jixu{ width:118px; height:46px; display:block; margin-left:592px; margin-top:10px; float:left; background:url(../images/118x46.png); border:none; cursor:pointer; }
+
+
+
+/*结果页面*/
+/*.box2{ width:438px; height:572px; margin-left:auto; margin-right:auto;}
+.head2{ width:100%; height:74px; overflow:hidden;};rgin-left:10px; margin-top:20px; }
+.more{ background:url(../images/test_06.jpg); width:138px; height:39px; display:block; margin-top:20px;}
+.main3{ clear:left; background:url(../images/bg4.jpg); width:438px; height:498px; overflow:hidden;}
+.inner_jieguo{ width:362px; height:187px; margin-top:155px; height:187px; margin-left:41px;}
+.inner_jieguo img{float:left;}
+.p4{ display:block; float:left; width:168px; color:#FFF; font-size:16px; margin-left:14px;}
+*/
+.box2{ width:438px; height:572px; margin-left:auto; margin-right:auto;}
+.main3{ background:url(../images/bg_jieguo_06.jpg); width:438px; height:498px; margin-left:auto; margin-right:auto; clear:left; overflow:hidden;}
+.head2{ width:100%; height:74px; overflow:hidden;}
+.logo2{ display:block; width:134px; height:42px; background:url(../images/logo2.jpg); margin-left:10px; margin-top:20px; }
+.more{ background: url(../images/138x39.jpg); width:138px; height:39px; display:block; margin-top:20px;}
+.inner_jieguo{ width:392px; height:247px; margin-top:79px; margin-left:auto; margin-right:auto;}
+.p4{ font-size:18px; color:#0c3b9c; font-weight:bold;}
+.p5{ width:392px; height:102px; font-size:14px; margin-top:10px;}
+.p6{ width:392px; height:121px; display:block; font-size:14px; margin-top:10px;}
+
+

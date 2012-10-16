@@ -15,7 +15,7 @@ $key = $_GET['key'];
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo TITLE;?></title>
-<link href="../../assets_testapp/diaosi/css/style.css" rel="stylesheet" type="text/css" />
+<link href="src/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf-8"    src="http://fusion.qq.com/fusion_loader?appid=<?php echo "100648214";?>&platform=qzone"></script>
 </head>
  
@@ -29,7 +29,7 @@ $key = $_GET['key'];
          </div>  
          <!--测试题出题部分-->
          <div class="main2">
-         	<div class="t1"><img src="../../assets_testapp/diaosi/images/161x44.jpg"/></div>
+         	<div class="t1"><img src="src/images/161x44.jpg"/></div>
             <div class="result">
             	<p class="p1"><?php echo $result[$key]['title'];?></p>
                 <p class="p2">
@@ -50,8 +50,8 @@ $key = $_GET['key'];
                 <p class="p3">还可以输入<span id="J_keycount">50</span>个字符</p>
             </div>
             <div class="try">
-            	<a class="a1" title="拖拉网" href="http://www.tuolar.com"><img src="../../assets_testapp/diaosi/images/196x47.jpg"/></a>
-                <a class="a2" href="<?php echo BASEURL;?>"><img src="../../assets_testapp/diaosi/images/148x47.jpg"/></a>
+            	<a class="a1" title="拖拉网" href="http://www.tuolar.com"><img src="src/images/196x47.jpg"/></a>
+                <a class="a2" href="<?php echo BASEURL;?>"><img src="src/images/148x47.jpg"/></a>
             </div>
          </div>        
   	</div>
@@ -102,7 +102,7 @@ $(function(){
 		  // hosting应用要求将图片存放在APP域名下或腾讯CDN
 		  // non-hosting应用要求将图片上传到该应用开发者QQ号对应的QQ空间加密相册中。 
 		  // 即non-hosting应用图片域名必须为：qq.com、pengyou.com、qzoneapp.com、qqopenapp.com、tqapp.cn。
-		  pics :"<?php echo BASEURL."../../assets_testapp/diaosi/images/".$result[$key]['image'];?>",
+		  pics :"<?php echo BASEURL."src/images/".$result[$key]['image'];?>",
 
 		  // 可选。透传参数，用于onSuccess回调时传入的参数，用于识别请求。
 		  context:"share",
