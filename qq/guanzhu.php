@@ -82,30 +82,33 @@ body{font-size:12px; font-family:"微软雅黑", Arial, sans-serif; background:#
             <p class="qCkjg">关注拖拉网QQ空间，然后<a href="javascript:void(0);" onclick="vResult();"><!--查看结果--></a></p>
         </div>
     </div>
-<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script language="javascript" src="./js/jquery-1.8.2.min.js"></script>
 <script language="javascript">
-var b_flag = <?php echo $result['isfans']; ?>;
-var nexturl = '<?php echo $nexturl;?>';
+$(function(){
+	var b_flag = <?php echo $result['isfans']; ?>;
+	var nexturl = '<?php echo $nexturl;?>';
 
-function vResult(){
-	if(b_flag == '0'){
-		$.ajax({
-			type:'post',
-			url:'fans/check_fans.php',
-			cache:false,
-			data:'',
-			success:function(data){
-				if(data==0){
-					$('#alertAttention').css('display','block');
-				}else{
-					location.href = nexturl;
+	function vResult(){
+		if(b_flag == '0'){
+			$.ajax({
+				type:'post',
+				url:'fans/check_fans.php',
+				cache:false,
+				data:'',
+				success:function(data){
+					if(data==0){
+						$('#alertAttention').css('display','block');
+					}else{
+						location.href = nexturl;
+					}
 				}
-			}
-		});
-	}else{
-		location.href = nexturl;
+			});
+		}else{
+			location.href = nexturl;
+		}
 	}
-}
+});
+
 </script>
 </body>
 </html>
