@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+a{ outline:none;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+a{ blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF Opera */ } a:focus{ -moz-outline-style: none; /* FF */ } 
+
+
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:610px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:77px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:27px; background: url(../images/fashionmore.jpg); margin-top:30px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background: url(../images/sign.jpg) no-repeat; width:206px; height:47px; margin-top:23px;}
+
+.main1{ background: url(../images/BG1.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+
+/*读心术独有*/
+
+.guess{ display:block; width:107px; height:155px; margin-left:102px; margin-top:80px;}
+.rym_icon{ height:470px; margin-left:74px; margin-top:24px;}
+.rym_icon_lie1{ width:35px; height:466px; float:left; margin-left:30px;}
+.rym_icon_lie2{ width:35px; height:466px; float:left; margin-left:27px;}
+.rym_icon_lie3{ width:35px; height:466px; float:left; margin-left:28px;}
+.rym_icon_lie4{ width:35px; height:466px; float:left; margin-left:27px;}
+.rym_icon_lie5{ width:35px; height:466px; float:left; margin-left:26px;}
+.rym_icon_lie6{ width:35px; height:466px; float:left; margin-left:23px;}
+.rym_icon_lie7{ width:35px; height:466px; float:left; margin-left:26px;}
+.rym_icon_lie8{ width:35px; height:466px; float:left; margin-left:23px;}
+.icon{width:35px; height:35px; display:block; float:left; }
+
+
+
+
+
+/*测试题页面*/
+.main2{background: url(../images/BG2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main2 .result_image{ display:none; float:left; width:109px; height:109px; margin-left:214px; margin-top:219px;}
+.result_box{ width:223px; height:148px; float:left; margin-left:147px; margin-top:237px;}
+.result_box .a1{ display:block; width:223px; height:46px;}
+.result_box .a2{ display:block;  width:172px; height:47px; margin-top:10px;}
+
+
+
+
+
+/*结果页面*/
+/*.main3{background: url(../images/BG3.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main3 .inner{ width:705px; height:320px; margin-top:113px; margin-left:39px;}
+.main3 .inner .d1{ width:359px; height:234px;}
+.main3 .inner .d1 img{ float:left; margin-top:47px;}
+.main3 .inner .p2{ display:block; width:250px; height:122px; font-size:17px; color:#392000; float:right; margin-top:77px;}
+
+.main3 .inner .d2{ width:325px; height:234px; }
+.main3 .inner .d2 .p3{ font-size:16px; color:#262626; height:16px; float:left;}
+
+.main3 .inner .d2 .p4{ height:21px; width:170px; display:block; float:left; text-align:right; font-size:16px; margin-top:10px;	}
+.main3 .inner .d2 .p4 span{color:red;}
+
+.main3 .inner .a2{ width:161px; height:46px; display:block; margin-top:42px; float:left;}
+.main3 .inner .a3{ width:172px; height:47px; display:block; margin-top:42px; margin-left:30px; float:left;}
+.dd{width:325px; height:152px; resize:none; margin-top:10px;  text-align:left; vertical-align:top; font-size:14px; float:left;}
+
+
+*/
+

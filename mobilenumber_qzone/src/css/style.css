@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+a{ outline:none;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+input{ outline:none;}
+a{ blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF Opera */ } a:focus{ -moz-outline-style: none; /* FF */ } 
+
+
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:3px 0px; }
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:600px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:77px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:27px; background: url(../images/fashionmore.jpg); margin-top:30px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background:  url(../images/sign.jpg) no-repeat; width:46px; height:24px; margin-top:30px;}
+
+.main1{ background: url(../images/BG1.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main2{background: url(../images/BG2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main3{background: url(../images/BG3.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+/*凶吉特有*/
+.introduce{ display:block; width:590px; height:79px; margin-top:114px; margin-left:70px; font-size:16px; color:#12110b;}
+.inputID{ width: 418px; height:43px; margin-top:15px; margin-left:248px;}
+.input{ width: 230px; height:34px; line-height:34px; border1px solid  #C0E1E3; font-size:20px; padding-left:3px; vertical-align:middle; float:left; display:block;}
+.submit{ background:url(../images/check.jpg); width:147px; height:42px; cursor:pointer; border:none; margin-top:0px; margin-left:5px; display:block; float:left;}
+.big_result1{ width:102px; height:102px; display: block; margin:187px auto 70px;}
+.big_result2{ width:93px; height:97px; display:block;  margin:187px auto 75px;}
+.big_result3{ width:216px; height:73px; display:block;  margin-top:198px; margin-left:298px; margin-bottom:86px;}
+.big_result4{ width:216px; height:73px; display:block;  margin-top:198px; margin-left:298px; margin-bottom:86px;}
+.shareto{ display:block; width:182px; height:52px; margin-left:314px; }
+.pingyu{ width:270px; height:72px; font-size:26px; font-family: "Arial Black", Gadget, sans-serif; color:#A76E00; display:block; font-weight:bold; margin-top:135px; margin-left:270px; text-align:center;}
+.more{ width:327px; height:41px; margin-left:250px; }
+.more_wonderful{ display:block; width:149px; height:41px; float:left;}
+.test_again{ width:140px; height:40px; display:block; float:left; margin-left:10px;}
+.small_result1{ display:block; margin:20px auto 35px;}
+.small_result2{ display:block; margin:20px auto 40px;}
+.small_result3{ display:block; margin:20px auto 43px;}
+.small_result4{ display:block; margin:20px auto 43px;}
+
+

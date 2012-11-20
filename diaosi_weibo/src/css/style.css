@@ -45,17 +45,18 @@ i,em{ font-style:normal;}
 .main2{background: url(../images/bg2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
 .d1{ margin-top:8px;}
 .diaosi1{ width:431px; height:38px; display:block; margin-left:auto; margin-right:auto; font-size:28px; color:#002985; margin-top:43px; margin-bottom:27px;}
-.question{ width:700px; height:22px; display:block; margin-left:auto; margin-right:auto; color:#002985; font-weight:bold; margin-top:13px; line-height:22px;}
+.question{ width:700px; height:42px; display:block; margin-left:auto; margin-right:auto; color:#002985; font-weight:bold; margin-top:13px; line-height:22px;}
 .question .bingo{ width:19px; height:19px; display:block; float:left; vertical-align:middle; margin-top:5px;}
 .question span{ width:641px; height:22px; display:block; float:left; margin-left:22px; font-size:18px; margin-bottom:36px;}
 .question .i1{ font-style:italic; font-size:25px; display:block; float:left;}
 .question .i2{  font-size:18px; display:block; float:left; width:592px; margin-left:5px;}
 .t1{width:161px; height:44px; margin-left:auto; margin-right:auto; margin-top:38px;}
-.result{ width:384px; height:290px; float:left; margin-left:28px; margin-top:22px;}
+.result{ width:384px; height:290px; float:left; margin-left:36px; margin-top:22px;}
 .p1{ font-size:18px; font-weight:bold; color:#0c3b9c;}
-.p2{ font-size:14px;}
+.p2{ font-size:14px; text-indent:2em; width:350px;}
+.p2 span{ font-size:16px;}
 
-.fenxiang{ width:323px; height:289px; float:left; margin-left:25px; margin-top:22px;}
+.fenxiang{ width:323px; height:289px; float:left;  margin-top:22px;}
 .d2{ width:323px; height:152px; resize:none; float:left; font-size:14px; text-align:left; vertical-align:top;}
 .weibo{ width:133px; height:32px; float:left; margin-top:14px; background: url(../images/133x32.jpg) no-repeat; cursor:pointer;}
 .qq{ width:133px; height:32px; float:left; margin-top:14px; background: url(../images/133x32_2.png) no-repeat; cursor:pointer;}

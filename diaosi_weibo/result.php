@@ -57,7 +57,7 @@ $key = $_GET['key'];
             	<p class="p1"><?php echo $result[$key]['title'];?></p>
                 <p class="p2">
                 <?php echo $result[$key]['content']?>
-                <br />
+                <br /><br />
                 <?php echo $result[$key]['keywords1']?>
                 <br />
                 <?php echo $result[$key]['keywords2']?>

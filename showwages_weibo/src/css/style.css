@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+a{ outline:none;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:10px 0px; padding-top:20px;}
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:610px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:91px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:27px; background: url(../images/103x27.jpg); margin-top:30px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background: url(../images/129x64.jpg) no-repeat; width:129px; height:64px; margin-top:20px;}
+
+.main1{ background: url(../images/BG1.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.kaishi{ display:block; width:205px; height:48px; margin-top:5px; margin-left:122px; background:url(../images/205x48.jpg) no-repeat; border:none; display:block; cursor:pointer; float:left;}
+/*晒工资独有*/
+.main1 .inner{ width:387px; height:345px; display:block; margin-left:179px; margin-top:108px;}
+.main1 .inner img{ margin-left:5px;}
+.main1 .inner p{ float:left; width:383px; height:16px; margin-bottom:13px; display: block;}
+
+/*测试题页面*/
+.main2{background: url(../images/BG2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main2 .p1{ height:29px; margin-top:105px; text-align:center; font-size:26px; color:#009698;}
+.a1{width:94px; height:133px; display:block;  border-radius:6px; border:4px solid #F8EEB9 ; float:left;}
+.a1:hover{width:94px; height:133px;   background:#FFF;  border:4px solid #FFA800;}
+.a1 img{ display:block; margin-left:auto; margin-right:auto; margin-top:2px;}
+
+/*结果页面*/
+.main3{background: url(../images/BG3.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main3 .inner{ width:705px; height:320px; margin-top:113px; margin-left:39px;}
+.main3 .inner .d1{ width:359px; height:234px;}
+.main3 .inner .d1 img{ float:left; margin-top:47px;}
+.main3 .inner .p2{ display:block; width:250px; height:122px; font-size:17px; color:#392000; float:right; margin-top:77px;}
+
+.main3 .inner .d2{ width:325px; height:234px; }
+.main3 .inner .d2 .p3{ font-size:16px; color:#262626; height:16px; float:left;}
+
+.main3 .inner .d2 .p4{ height:21px; width:170px; display:block; float:left; text-align:right; font-size:16px; margin-top:10px;	}
+.main3 .inner .d2 .p4 span{color:red;}
+
+.main3 .inner .a2{ width:161px; height:46px; display:block; margin-top:42px; float:left;}
+.main3 .inner .a3{ width:172px; height:47px; display:block; margin-top:42px; margin-left:30px; float:left;}
+.dd{width:325px; height:152px; resize:none; margin-top:10px;  text-align:left; vertical-align:top; font-size:14px; float:left;}
+
+
+
+#J_loading,#J_cuccess,#J_lose{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	border: 1px solid #999;
+	text-align: center;
+	line-height: 50px;
+	font-size: 14px;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	--moz-border-radius: 5px;
+	border-radius: 5px; 
+	left:50%;
+	top:50%;
+	margin: -25px 0 0 -75px;
+	z-index: 3;
+	display:none;
+	filter:alpha(opacity=90);  /*IE5、IE5.5、IE6、IE7*/
+     opacity: 0.9;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+     background:#fff;
+}
+
+

@@ -34,14 +34,14 @@ $key = $_GET['key'];
             	<p class="p1"><?php echo $result[$key]['title'];?></p>
                 <p class="p2">
                 <?php echo $result[$key]['content']?>
-                <br />
+               	<br /><br />
                 <?php echo $result[$key]['keywords1']?>
                 <br />
                 <?php echo $result[$key]['keywords2']?>
                 </p>
             </div>
             <div class="fenxiang">
-            	<p class="p3_2">把结果分享到新浪微博：</p>
+            	<p class="p3_2">把结果分享到QQ微博：</p>
                 <form>
                 	<textarea class="d2 J_content">我是屌丝我怕谁，真屌丝，不做表面功夫！我居然是<?php echo $result[$key]['title'];?>，大家都来测一测属于哪种屌丝吧。<?php echo BASEURL.$_SESSION['meting'];?></textarea>
                
