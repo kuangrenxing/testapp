@@ -21,7 +21,7 @@ $idollistKey = array_rand($idollist,3);
 $meting = "";
 foreach($idollistKey as $i=>$v)
 {
-	$meting .= "@".$idollist[$v]['name'].' ';
+	$meting .= " @".$idollist[$v]['name'];
 }
 
 ////
@@ -37,11 +37,6 @@ $resultKey = substr($number, -4)%80+1;
 $result = $resultAttr[$resultKey];
 
 
-//发分享参数
-$title = "【手机号码凶吉测试】";
-$url = BASEURL;
-$comment = "经过专业计算，拥有号码".$_SESSION['number']."的人 原来 [".$result['0'].'-'.$result['1']."] ，赶快测一测手机号码的凶吉吧！！".BASEURL;
-$summary = "号码就像姓名、风水会影响运势命运的意义是一样的。虽然这只是一个号码，但是它与您的生活息息相关，也是您与很多人沟通的桥梁！所以『吉』与『凶』关系非常大，的确不可轻忽！";
 
 if($result['1'] == "吉")
 {
@@ -72,20 +67,15 @@ $_SESSION['image'] = $result['image'];
 $_SESSION['minimage'] = $result['minimage'];
 
 
-////
 
 
 
 //微博内容
-$content = "";
+$content = "【手机号码凶吉测试】经过专业计算，拥有号码".$_SESSION['number']."的人 原来 [".$result['0'].'-'.$result['1']."],号码就像姓名、风水会影响运势命运的意义是一样的。与您的生活息息相关。赶快测一测吧！".$meting.' '.BASEURL;
 
-$pic_url = BASEURL."";
+$pic_url = $images;
 //下一页面 可不用加http:// 则会自动加BASEURL
 $nexturl = "result.php";
-
-
-//结果参数 传给结果页
-$_SESSION['key'] = $key;
 
 		
 $url = APIURL."weibo.php?baseurl=".BASEURL."&content=$content&pic_url=$pic_url&nexturl=$nexturl";

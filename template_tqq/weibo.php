@@ -22,7 +22,7 @@ $idollistKey = array_rand($idollist,3);
 $meting = "";
 foreach($idollistKey as $i=>$v)
 {
-	$meting .= "@".$idollist[$v]['name'].' ';
+	$meting .= " @".$idollist[$v]['name'];
 }
 
 //微博内容
