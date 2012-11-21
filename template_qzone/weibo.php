@@ -25,7 +25,7 @@ $count = $left+$right;
 $result = getResult($count,$left,$right);
 
 //发分享参数
-$title = "【指纹的秘密】";
+$title = "指纹的秘密";
 $url = BASEURL;
 $comment = "刚刚做了一个超级有趣的测试，指纹竟然也可以测试性格命运，大家一起来测测吧。".BASEURL;
 $summary = "看一个人的性格与命运，我们经常从血型或星座入手，很少从指纹入手。其实指纹与性格、命运也有密切的联系。";

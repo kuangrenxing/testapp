@@ -25,9 +25,9 @@ $result = $resultAttr[$resultKey];
 //substr($_POST['number'], -4)
 
 //发分享参数
-$title = "【手机号码凶吉测试】";
+$title = "手机号码凶吉测试";
 $url = BASEURL;
-$comment = "经过专业计算，拥有号码".substr($_SESSION['number'], 0, 3)."****".substr($_SESSION['number'], -3)."的人 原来 [".$result['0'].'-'.$result['1']."] ，赶快测一测手机号码的凶吉吧！！".BASEURL;
+$comment = "经过专业计算，拥有号码".substr($_SESSION['number'], 0, 3)."****".substr($_SESSION['number'], -3)."的人 原来 [".$result['0'].'- '.$result['1']."] ，赶快测一测手机号码的凶吉吧！！".BASEURL;
 $summary = "号码就像姓名、风水会影响运势命运的意义是一样的。虽然这只是一个号码，但是它与您的生活息息相关，也是您与很多人沟通的桥梁！所以『吉』与『凶』关系非常大，的确不可轻忽！";
 
 if($result['1'] == "吉")

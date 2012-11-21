@@ -10,6 +10,6 @@ if(!isset($_SESSION["access_token"])){
 
 //去关注页
 $nexturl = BASEURL."result.php";
-header("Location: ".APIURL.'/guanzhu.php?nexturl='.$nexturl);
+header("Location: ".APIURL.'guanzhu.php?nexturl='.$nexturl);
 
 

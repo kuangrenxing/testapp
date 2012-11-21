@@ -54,7 +54,7 @@ function add_share()
 
 //接口调用示例：
 $ret = add_share();
-echo $ret;
+
 
 header("Location: ".$_REQUEST["nexturl"]);
 exit;
