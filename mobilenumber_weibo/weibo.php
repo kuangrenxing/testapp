@@ -66,7 +66,7 @@ $_SESSION['image'] = $result['image'];
 $_SESSION['minimage'] = $result['minimage'];
 
 //微博内容
-$content = "【手机号码凶吉测试】经过专业计算，拥有号码".$_SESSION['number']."的人 原来 [".$result['0'].'-'.$result['1']."],号码就像姓名、风水会影响运势命运的意义是一样的。与您的生活息息相关。赶快测一测吧！".$meting.' '.BASEURL;
+$content = "【手机号码凶吉测试】经过专业计算，拥有号码".substr($_SESSION['number'], 0, 3)."****".substr($_SESSION['number'], -3)."的人 原来 [".$result['0'].'-'.$result['1']."],号码就像姓名、风水会影响运势命运的意义是一样的。与您的生活息息相关。赶快测一测吧！".$meting.' '.BASEURL;
 
 $pic_url = $images;
 //下一页面 可不用加http:// 则会自动加BASEURL

@@ -27,8 +27,7 @@ $openid = $_SESSION["openid"];
 $nickname = $userinfo["nickname"];
 $headimg = $userinfo['figureurl_2']."/.jpg";
 $gender = $userinfo["gender"] == "男" ? 1 : 2;
-print_r($_SESSION);
-exit;
+
 header('Location:http://apptest.tuolar.com/qq/qq/user3.php?openid='.rawurlencode($openid)."&gender=".rawurlencode($gender)."&nickname=".rawurlencode($nickname)."&headimg=".rawurlencode($headimg));
 
 ?>

@@ -23,8 +23,15 @@ $arr = array(
 );
 $result = check_fans($arr);
 
+
+//check_fans  判断返回 判断出现错误，直接到下一步
+if(isset($result['ret']) && $result['ret']!=0)
+{
+	header("location: ".$nexturl);
+	exit;
+}
 //已经授权 跳到下一页面
-if($result['isfans'] == 1)
+if(isset($result['isfans']) && $result['isfans'] == 1)
 {
 	header("location: ".$nexturl);
 	exit;
@@ -79,16 +86,17 @@ body{font-size:12px; font-family:"微软雅黑", Arial, sans-serif; background:#
                 </dl>
                 <p class="clearfix"><a href="javascript:void(0);"><iframe src="http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F622001561&type=button&width=400&height=30&style=3" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:400px;height:30px;border:none;overflow:hidden;"></iframe></a><span id="alertAttention" style="display:none;">请先关注拖拉网</span></p>
             </div>
-            <p class="qCkjg">关注拖拉网QQ空间，然后<a href="javascript:void(0);" onclick="vResult();"><!--查看结果--></a></p>
+            <p class="qCkjg">关注拖拉网QQ空间，然后<a href="javascript:void(0);" class="J_result"><!--查看结果--></a></p>
         </div>
     </div>
 <script language="javascript" src="./js/jquery-1.8.2.min.js"></script>
 <script language="javascript">
+
 $(function(){
 	var b_flag = <?php echo $result['isfans']; ?>;
 	var nexturl = '<?php echo $nexturl;?>';
 
-	function vResult(){
+	$(".J_result").click(function(){
 		if(b_flag == '0'){
 			$.ajax({
 				type:'post',
@@ -106,8 +114,10 @@ $(function(){
 		}else{
 			location.href = nexturl;
 		}
+	});
+
 	}
-});
+);
 
 </script>
 </body>
