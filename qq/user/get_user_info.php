@@ -26,11 +26,7 @@ function get_user_info()
 $userinfo = get_user_info();
 if(isset($userinfo['ret']) && $userinfo['ret'] == 0)
 {
-	$_SESSION['nickname'] = $userinfo['nickname'];
-	$_SESSION['figureurl'] = $userinfo['figureurl'];
-	$_SESSION['figureurl_1'] = $userinfo['figureurl_1'];
-	$_SESSION['figureurl_2'] = $userinfo['figureurl_2'];
-	$_SESSION['gender'] = $userinfo['gender'];	
+	$_SESSION['userinfo'] = $userinfo;
 }
 else
 {

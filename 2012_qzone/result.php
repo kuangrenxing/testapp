@@ -1,8 +1,12 @@
 <?php
 include 'common/define.php';
 session_start();
-//print_r($_SESSION);
-//print_r($_COOKIE['px_head_pic']);
+
+if(isset($_SESSION['val']) == false)
+{
+	header("location: ".BASEURL);
+	exit;
+}
 $result = array(
 		'1'=>array(
 				'title' => '白羊座',
@@ -90,7 +94,7 @@ $sign = $result[$_SESSION['val']]['sign'];
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title><?php echo TITLE;?></title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -100,7 +104,7 @@ $sign = $result[$_SESSION['val']]['sign'];
     <div id="ztcontent">
     	<div class="box1">
          <div class="haed">
-         	<div class="head_logo left"><a class="logo" title="拖拉网" href="http://www.tuolar.com"></a><div class="fashion_more"></div></div>
+         	<div class="head_logo left"><a target="_blank" class="logo" title="拖拉网" href="http://www.tuolar.com"></a><div class="fashion_more"></div></div>
             <div class="sign right"></div>
          </div>  
          <!--测试题出题部分-->
@@ -113,7 +117,7 @@ $sign = $result[$_SESSION['val']]['sign'];
                     </p>
                     <div class="button">
                     		<!--<a href="" class="goto_1"></a>-->
-                            <a href="" class="goto_2"></a>
+                            <a target="_blank" href="http://user.qzone.qq.com" class="goto_2"></a>
                             <!--<a href="" class="goto_3"></a>-->
                             <a href="<?php echo BASEURL;?>" class="test_friend"></a>
                             <a href="http://www.tuolar.com" target="_blank"  class="more_wonderful"></a>
@@ -121,7 +125,7 @@ $sign = $result[$_SESSION['val']]['sign'];
          </div>        
   	</div>
     </div>
-  	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
+  	<div class="ztfooter"><p>Copyright &copy Tuolar.com All Rights Reserved</p></div>	
 </div>
 
 </body>

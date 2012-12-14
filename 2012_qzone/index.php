@@ -42,7 +42,7 @@ include_once 'common/define.php';
          </div>        
   	</div>
     </div>
-  	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
+  	<div class="ztfooter"><p>Copyright &copy Tuolar.com All Rights Reserved</p></div>	
 </div>
 <script src="src/js/jquery.min.js"></script>
 <script src="src/js/countdown.js"></script>

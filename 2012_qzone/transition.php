@@ -9,7 +9,7 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title><?php echo TITLE;?></title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -26,18 +26,18 @@ session_start();
          <div class="main3">
 					<div class="dd">
                     	<div class="user_img">
-                        		<img src="src/images/测试结果-查看结果_03.jpg"/>
-                                <p>vivian~</p>
+                        		<img src="<?php echo $_SESSION['userinfo']['figureurl_2'];?>"/>
+                                <p><?php echo $_SESSION['userinfo']['nickname'];?></p>
                         </div>
-                    	<a class="check_result_sina" href=""></a>
+                    	<!-- <a class="check_result_sina" href=""></a> -->
                         <!--<a class="check_result_qqweibo" href=""></a>-->
-                        <!--<a class="check_result_qqzone" href=""></a>-->
+                        <a href="result.php" class="check_result_qqzone" href=""></a>
                     </div>
                       
          </div>        
   	</div>
     </div>
-  	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
+  	<div class="ztfooter"><p>Copyright &copy Tuolar.com All Rights Reserved</p></div>	
 </div>
 
 </body>
