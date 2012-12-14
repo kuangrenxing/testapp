@@ -30,8 +30,7 @@ $tuolarApi 	= new TuolarApi();
 
 $userdata	= $tuolarApi->update_user($userinfo , $sns , $connfrom , $authinfo);
 
-print_r($_SESSION);
-print_r($userdata);
+
 
 $life_time = COOKIE_EXPIRE;
 $expire_time = time() + $life_time;
@@ -42,7 +41,7 @@ setcookie("px_head_pic", $userdata['head_pic'], $expire_time, "/",COOKIE_DOMAIN,
 setcookie("px_sex", $_SESSION['gender'] == "男" ? 1 : 2, $expire_time, "/",COOKIE_DOMAIN,0);
 setcookie("px_stgle", "", $expire_time, "/",COOKIE_DOMAIN,0);
 
-
+$_SESSION['userinfo']["uid"] = $userdata['uid'];
 $_SESSION["username"] = $userdata['username'];
 $_SESSION["head_pic"] = $userdata['head_pic'];
 

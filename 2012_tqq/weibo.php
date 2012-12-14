@@ -5,9 +5,6 @@ include 'common/define.php';
 
 session_start();
 
-//当传来参数时，进行保存，要在得到收听列表前
-// if(isset($_GET['content']))
-// 	$_SESSION['content'] = $_GET['content'];
 
 if(isset($_SESSION['idollist']) == false)
 {
@@ -26,16 +23,20 @@ foreach($idollistKey as $i=>$v)
 }
 
 //微博内容
-$content = "";
+$content = "【十二星座怎么度过世界末日】不论信与不信，世界末日最后终究会不会来，2012的预言都是让我们学会更加珍惜眼前人，珍惜所过的每一天。".$meting.' '.BASEURL;
 
-$pic_url = BASEURL."";
+
+//必要的参数
+if(isset($_SESSION['val']) == false)
+{
+	header("location: ".BASEURL);
+	exit;
+}
+$val = $_SESSION['val'];
+$pic_url = BASEURL."src/images/".$val.".jpg";
+
 //下一页面 可不用加http:// 则会自动加BASEURL
-$nexturl = "result.php";
-
-
-//结果参数 传给结果页
-$_SESSION['key'] = $key;
-
+$nexturl = "transition.php";
 		
 $url = APIURL."weibo.php?baseurl=".BASEURL."&content=$content&pic_url=$pic_url&nexturl=$nexturl";
 header("location: ".$url);

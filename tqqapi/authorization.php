@@ -42,8 +42,7 @@ if ($_SESSION['t_access_token'] || ($_SESSION['t_openid'] && $_SESSION['t_openke
     
     //获取用户信息
     $r = Tencent::api('user/info');
-    $ret = json_decode($r, true);
- 
+    $ret = json_decode($r, true); 
    
     $_SESSION['userinfo']=$ret['data'];    
     $_SESSION['userinfo']['id']=$ret['data']['openid'];
