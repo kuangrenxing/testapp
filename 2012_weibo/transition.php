@@ -3,7 +3,7 @@ header("content-type:text/html;charset=utf-8;");
 include_once 'common/define.php';
 session_start();
 
-if(isset($_SESSION['t_access_token']) == false)
+if(isset($_SESSION['token']['access_token']) == false)
 {
 	header("location: ".BASEURL);
 	exit;
@@ -30,11 +30,11 @@ if(isset($_SESSION['t_access_token']) == false)
          <div class="main3">
 					<div class="dd">
                     	<div class="user_img">
-                        		<img src="<?php echo $_SESSION['userinfo']['head'].'/120';?>"/>
-                                <p><?php echo $_SESSION['userinfo']['nick'];?></p>
+                        		<img src="<?php echo str_replace("/50", "/180", $_SESSION['userinfo']['profile_image_url']);?>"/>
+                                <p><?php echo $_SESSION['userinfo']['name'];?></p>
                         </div>
                     	<!-- <a class="check_result_sina" href=""></a> -->
-                        <a href="result.php" class="check_result_qqweibo" href=""></a> 
+                        <a href="result.php" class="check_result_sina" href=""></a> 
                         <!-- <a href="result.php" class="check_result_qqzone" href=""></a> -->
                     </div>
                       

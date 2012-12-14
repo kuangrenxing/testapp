@@ -100,5 +100,8 @@ label,input{ outline:none;}
 .check_result_qqweibo{width:182px; height:52px; background: url(../images/icon_touming.png) 0px -108px no-repeat; display:block; float:left; margin-left:17px; margin-top:41px;}
 .check_result_qqzone{width:182px; height:52px; background: url(../images/icon_touming.png) 0 -54px no-repeat; display:block; float:left; margin-left:17px; margin-top:41px;}
 
-
+.time_kuang{
+	width:38px;
+	display:inline-block;
+}
 

@@ -96,7 +96,10 @@ $sign = $result[$_SESSION['val']]['sign'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo TITLE;?></title>
 <link href="src/css/style.css" rel="stylesheet" type="text/css" />
-
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.tuolar.com/src/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">DD_belatedPNG.fix('.pngFix');</script>
+<![endif]-->
 </head>
  
 <body id="ztBodyBg">
@@ -109,9 +112,9 @@ $sign = $result[$_SESSION['val']]['sign'];
          </div>  
          <!--测试题出题部分-->
          <div class="main2">
-					<img style=" position:absolute; display:block; top:24px; left:37px;" src="src/images/<?php echo $slug;?>"/>
+					<img class="pngFix" style=" position:absolute; display:block; top:24px; left:37px;" src="src/images/<?php echo $slug;?>"/>
                     <p class="result">
-                    		<img src="src/images/<?php echo $sign;?>"/>
+                    		<img class="pngFix" src="src/images/<?php echo $sign;?>"/>
                             <span><?php echo $title;?></span>
                             <i><?php echo $content;?></i>
                     </p>
