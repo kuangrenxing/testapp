@@ -1,7 +1,9 @@
 <?php
 require_once("../comm/config.php");
 require_once("../comm/utils.php");
+require_once("../comm/define.php");
 
+session_start();
 
 function get_user_info()
 {
@@ -22,12 +24,28 @@ function get_user_info()
 //email		qz_	$_SESSION["openid"] @qq.com
 //获取用户基本资料
 $userinfo = get_user_info();
+if(isset($userinfo['ret']) && $userinfo['ret'] == 0)
+{
+	$_SESSION['nickname'] = $userinfo['nickname'];
+	$_SESSION['figureurl'] = $userinfo['figureurl'];
+	$_SESSION['figureurl_1'] = $userinfo['figureurl_1'];
+	$_SESSION['figureurl_2'] = $userinfo['figureurl_2'];
+	$_SESSION['gender'] = $userinfo['gender'];	
+}
+else
+{
+	echo "获取用户信息有误";
+	exit;
+}
 
-$openid = $_SESSION["openid"];
-$nickname = $userinfo["nickname"];
-$headimg = $userinfo['figureurl_2']."/.jpg";
-$gender = $userinfo["gender"] == "男" ? 1 : 2;
 
-header('Location:http://apptest.tuolar.com/qq/qq/user3.php?openid='.rawurlencode($openid)."&gender=".rawurlencode($gender)."&nickname=".rawurlencode($nickname)."&headimg=".rawurlencode($headimg));
+// $openid = $_SESSION["openid"];
+// $nickname = $userinfo["nickname"];
+// $headimg = $userinfo['figureurl_2']."/.jpg";
+// $gender = $userinfo["gender"] == "男" ? 1 : 2;
+
+$regUserFile = 'reguser.php';
+//header('Location:'.BASEURL.$regUserFile.'.?openid='.rawurlencode($openid)."&gender=".rawurlencode($gender)."&nickname=".rawurlencode($nickname)."&headimg=".rawurlencode($headimg));
+header('Location:'.BASEURL.$regUserFile);
 
 ?>

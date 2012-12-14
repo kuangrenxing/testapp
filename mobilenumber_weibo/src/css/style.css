@@ -47,7 +47,7 @@ a{ blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF 
 .inputID{ width: 418px; height:43px; margin-top:15px; margin-left:248px;}
 .input{ width: 230px; height:34px; line-height:34px; border1px solid  #C0E1E3; font-size:20px; padding-left:3px; vertical-align:middle; float:left; display:block;}
 .submit{ background:url(../images/check.jpg); width:147px; height:42px; cursor:pointer; border:none; margin-top:0px; margin-left:5px; display:block; float:left;}
-.big_result1{ width:102px; height:102px; display: block; margin:187px auto 70px;}
+.big_result1{  height:102px; display: block; margin:187px auto 70px;}
 .big_result2{ width:93px; height:97px; display:block;  margin:187px auto 75px;}
 .big_result3{ width:216px; height:73px; display:block;  margin-top:198px; margin-left:298px; margin-bottom:86px;}
 .big_result4{ width:216px; height:73px; display:block;  margin-top:198px; margin-left:298px; margin-bottom:86px;}

@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset开始*/
+html,body,div,ul,li,ol,dl,dt,dd,p,input,table,td,tr,h1,h2,h3,h4,h5,h6,form{margin:0;padding:0;}
+img ,img a{border:none;}
+body{font-family:"微软雅黑";font-size:12px;text-align:left;	color:#000;}
+ul,ol{list-style-type:none;}
+a ,a:hover{text-decoration:none;cursor:pointer;color:#000;}
+a{ outline:none;}
+i,em{ font-style:normal;}
+.clear{clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+input{ outline:none;}
+a{ blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF Opera */ } a:focus{ -moz-outline-style: none; /* FF */ } 
+label,input{ outline:none;}
+
+
+#ztcontainer{width:950px;margin:0 auto; overflow:hidden; position:relative; background-color:#fff;}
+#ztHeadText{ line-height:18px; font-size:14px; color:#ee463f; padding:5px 0px; color:#FF8010;}
+#ztcontent{ position:relative; margin-right:auto; margin-left:auto;}
+
+.ztfooter{text-align:center; margin:3px 0px; }
+.ztfooter p{width:950px;color:#000;font-size:12px;margin:0 auto;}
+
+
+.ztW216{ width:216px; float:left; padding:10px; display:inline; }
+
+/*以下为每次修改一部分，主要分为两个部分*/
+/*测试页面*/
+/*开始页面*/
+.box1{ width:780px; height:600px; margin-left:auto; margin-right:auto; position:relative;}
+.head{width:100%; height:91px;}
+.head_logo{ width:307px; height:77px; overflow:hidden; margin-left:10px;}
+
+.logo{ display:block; width:179px; height:55px; background:url(../images/img_start_03.jpg) no-repeat; float:left; margin-top:10px;}
+.fashion_more{ float:left; margin-left:10px;  width:103px; height:27px; background: url(../images/fashionmore.jpg); margin-top:40px;}
+/*标志是区分没测而是的，所以每次都不一样*/
+.sign{ background:  url(../images/sign.jpg) no-repeat; width:176px; height:50px; float:right; margin-top:20px;}
+
+.main1{ background: url(../images/BG1.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main2{background: url(../images/BG2.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px; position:relative;}
+.main3{background: url(../images/BG3.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+.main4{background: url(../images/BG4.jpg) no-repeat; width:100%; height:495px; overflow:hidden; clear:left; margin-top:10px;}
+/*特有*/
+.time{ display:block; width:349px; height:65px; font-family:"微软雅黑"; font-size:24px; color:000; margin-left:220px; margin-top:127px;}
+.time span img{ margin-left:3px; margin-right:3px;}
+.constellation{ width:600px; height:224px; margin-left:; display:block; margin-left:132px; margin-top:40px;}
+.constellation .xz{ width:83px; height:104px; display:block; cursor:pointer; float:left; margin-right:5px; margin-bottom:5px;}
+.constellation .xz span{ width:83px; height:83px; display:block;}
+.constellation .xz i{ width:83px; color:#fff; font-size:13px; font-family:"微软雅黑"; text-align:center; display:block;}
+.baiyang{ background: url(../images/baiyang.png) no-repeat;}
+.baiyang:hover{ background: url(../images/baiyang_hover.png) no-repeat;}
+.jinniu{ background: url(../images/jinniu.png) no-repeat;}
+.jinniu:hover{ background: url(../images/jinniu_hover.png) no-repeat;}
+.shuangzi{ background: url(../images/shuangzi.png) no-repeat;}
+.shuangzi:hover{ background: url(../images/shuangzi_hover.png) no-repeat;}
+.juxie{ background: url(../images/juxie.png) no-repeat;}
+.juxie:hover{ background: url(../images/juxie_hover.png) no-repeat;}
+.shizi{ background: url(../images/shizi.png) no-repeat;}
+.shizi:hover{ background: url(../images/shizi_hover.png) no-repeat;}
+.chunv{ background: url(../images/chunv.png) no-repeat;}
+.chunv:hover{ background: url(../images/chunv_hover.png) no-repeat;}
+.tiancheng{ background: url(../images/tiancheng.png) no-repeat;}
+.tiancheng:hover{ background: url(../images/tiancheng_hover.png) no-repeat;}
+.tianxie{ background: url(../images/tianxie.png) no-repeat;}
+.tianxie:hover{ background: url(../images/tianxie_hover.png) no-repeat;}
+.sheshou{ background: url(../images/sheshou.png) no-repeat;}
+.sheshou:hover{ background: url(../images/sheshou_hover.png) no-repeat;}
+.mojie{ background: url(../images/mojie.png) no-repeat;}
+.mojie:hover{ background: url(../images/mojie_hover.png) no-repeat;}
+.shuiping{ background: url(../images/shuiping.png) no-repeat;}
+.shuiping:hover{ background: url(../images/shuiping_hover.png) no-repeat;}
+.shuangyu{ background: url(../images/shuangyu.png) no-repeat;}
+.shuangyu:hover{ background: url(../images/shuangyu_hover.png) no-repeat;}
+
+
+.result{ display:block; width:329px; height:auto; position:relative; margin-left:244px; margin-top:180px; color:#fff; font-family:"微软雅黑";}
+.result img{ display:block; position:absolute; top:-58px; right:-13px;}
+.result span { width:329px; height:25px; display:block; font-size:18px; margin-bottom:10px;}
+.result i{ font-size:15px;}
+
+
+.button{ width:417px; height:58px; position:absolute; left:211px; bottom:26px; 	}
+.button .goto_1{ width:137px; height:45px; background:url(../images/share.png); float:left; display:block;}
+.button .goto_2{ width:137px; height:45px; background:url(../images/share.png) 0px -50px; float:left; display:block;}
+.button .goto_3{ width:137px; height:45px; background:url(../images/share.png) 0px -100px; float:left; display:block;}
+
+
+.test_friend{ width:110px; height:36px; float:left; display:block; background:url(../images/icon.png) 0px 0px; margin-left:10px; margin-top:5px;}
+.more_wonderful{ width:132px; height:36px; float:left; display:block; background:url(../images/icon.png) -120px 0px;  margin-left:10px; margin-top:5px;}
+
+.dd{ width:313px; height:128px; margin-left:265px; margin-top:217px;}
+.user_img{ width: 96px; height:120px; float:left;}
+.user_img img{ display:block; width:96px; height:95px;}
+.user_img p{ width:96px; height:22px; font-size:17px; color:#464646; display:block; line-height:22px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; text-align:center; }
+
+.check_result_sina{width:182px; height:52px; background: url(../images/icon_touming.png) no-repeat; display:block; float:left; margin-left:17px; margin-top:41px;}
+.check_result_qqweibo{width:182px; height:52px; background: url(../images/icon_touming.png) 0px -108px no-repeat; display:block; float:left; margin-left:17px; margin-top:41px;}
+.check_result_qqzone{width:182px; height:52px; background: url(../images/icon_touming.png) 0 -54px no-repeat; display:block; float:left; margin-left:17px; margin-top:41px;}
+
+
+
