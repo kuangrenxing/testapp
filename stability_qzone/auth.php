@@ -10,6 +10,11 @@ else
 	header("location: ".BASEURL);
 	exit;
 }
+//下一页面文件
+$nextFile = "weibo.php";
+//授权url
+$code_url = APIURL."?url=".BASEURL.$nextFile."&type=".WB_APP_CONN_WEIFUSHI;
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,12 +35,27 @@ else
          </div>  
          <!--测试题出题部分-->
          <div class="main3">
-         	     <span class="score ">100</span>
-                 <a class="shareto"><img src="src/images/QQ_check.jpg"/></a>
+         	     <span  class="score  J_random">100</span>
+                 <a href="<?php echo $code_url;?>" class="shareto"><img src="src/images/QQ_check.jpg"/></a>
          </div>        
   	</div>
     </div>
   	<div class="ztfooter"><p>Copyright Tuolar.com All Rights Reserved</p></div>	
 </div>
+<script src="src/js/jquery.min.js"></script>
+<script>
+$(function(){
+	var delay = 90;
+	function randomVal(){
+		var n = 100;
+		var m = 1;
+		var ret = Math.floor(Math.random()*n)+m;
+		$(".J_random").text(ret);
+
+		setTimeout(arguments.callee, delay);
+	}
+	setTimeout(randomVal, delay);	
+});
+</script>
 </body>
 </html>
