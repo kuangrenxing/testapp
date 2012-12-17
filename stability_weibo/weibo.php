@@ -1,14 +1,30 @@
 <?php
-header("content-type:text/html;charset=utf-8;");
-
-include_once './common/define.php';
+header("content-type:text/html;charset=utf-8");
+include 'common/define.php';
 
 session_start();
 
-//检查授权
-if(!isset($_SESSION["access_token"])){
-	header('Location:'.BASEURL);
+//获得参数在获得好友前写
+if(isset($_GET['content']))
+{
+	$_SESSION['content'] = $_GET['content'];
+}
+
+//获得好友列表
+if(isset($_SESSION['friends']) == false)
+{
+	header("Location: ".APIURL.'friends.php?nexturl='.BASEURL.'weibo.php');
 	exit;
+}
+
+$friends = $_SESSION['friends'];
+$friends = $friends['users'];
+$friendsKey = array_rand($friends,3);
+
+$meting = "";
+foreach($friendsKey as $i=>$v)
+{
+	$meting .= " @".$friends[$v]['name'];
 }
 
 //必要的参数
@@ -76,44 +92,37 @@ if($count > 89){
 			'content' => "您的生活太安定了，我都不知道说什么好，不知道元芳兄怎么看分享图片：元芳图片+“靠，I服了U”",
 			'image' => "ret1.jpg",
 			'retimg' => 'result_img1.jpg',
-			);
+	);
 }elseif ($count > 60){
 	$result = array(
 			'content' => "您的生活中安定与新鲜刺激并存，这是最适合年轻人的生活了。",
 			'image' => "ret2.jpg",
 			'retimg' => 'result_img2.jpg',
-			);
+	);
 }elseif ($count > 40){
 	$result = array(
 			'content' => "安定暂时与你无缘，努力吧少年。",
 			'image' => "ret3.jpg",
 			'retimg' => 'result_img3.jpg',
-			);
+	);
 }else {
 	$result = array(
 			'content' => "你的生活如此漂泊不定，流浪歌才是你的主题曲吧",
 			'image' => "ret4.jpg",
 			'retimg' => "result_img4.jpg",
-			);
+	);
 }
 
-//发分享参数
-$title = "安定指数";
-$url = BASEURL;
-$comment = "这年头在城市想有个安定的生活可不是件容易的事，来测一测你的安定指数吧。".BASEURL;
-$summary = "刚刚做了一个超级有趣的测试，安定指数测试：".$result['content'];
-$images = BASEURL."src/images/".$result['image'];
+//微博内容
+$content = "【安定指数】这年头在城市想有个安定的生活可不是件容易的事，来测一测你的安定指数吧。".$meting.' '.BASEURL;
 
+$pic_url = BASEURL."src/images/".$result['image'];
+//下一页面 可不用加http:// 则会自动加BASEURL
+$nexturl = BASEURL."result.php";
 
 $_SESSION['count'] = $count;
 $_SESSION['result'] = $result;
 
-//下一页面url
-$nexturl = BASEURL."attention.php";
-//进行分享
-header("Location: ".APIURL."share/add_share.php?title=$title&url=$url&comment=$comment&summary=$summary&images=$images&nexturl=$nexturl");
+
+header("location: ".APIURL.'weibo.php?content='.$content.'&pic_url='.$pic_url.'&nexturl='.$nexturl);
 exit;
-
-
-
-?>
