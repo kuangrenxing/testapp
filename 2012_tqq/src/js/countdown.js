@@ -15,10 +15,15 @@ $(function(){
 		var leftsecond = parseInt(leftTime/1000); 
 		//var day1=parseInt(leftsecond/(24*60*60*6)); 
 		var day1=Math.floor(leftsecond/(60*60*24)); 
+		if(day1 < 0){
+			$(".time").text("玛雅人预言的世界末日已经被延期了...");
+			return;
+		}
 		var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
 		var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
 		var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
 		//var cc = document.getElementById(divname); 
+
 		
 		day1 < 10 ? day1='0'+day1 : day1;
 		hour < 10 ? hour='0'+hour : hour;

@@ -4,7 +4,7 @@ include_once 'common/define.php';
 include 'common/config.php';
 
 $key = $_GET['key'];
-
+header("content-type:text/html;charset=utf-8");
 
 ?>
 
